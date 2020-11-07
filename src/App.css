@@ -1,12 +1,41 @@
-.App {
-  text-align: center;
+
+body{
+  background-color: #849dce;
+  background-image: url(./img/보라배경.svg);
+  /* Set rules to fill background */ 
+   min-width: 100%; 
+   min-height: 650px;
+   /* Set up proportionate scaling */ 
+   background-size: cover;
+   height: auto;
+
+  background-repeat: no-repeat;
+  display: flex;
+  color: white;
 }
 
+.info{
+  padding-left: 10vw;
+  padding-top: 25vh;
+  font-size: 3vh;
+  text-align: left;
+  display: inline-block;
+}
+
+.info2{
+  font-size: 5vh;
+}
+
+.table{
+  display: inline-block;
+  padding-left: 40vw;
+}
+
+/* 
 .App-logo {
-  /*
+  
   height: 40vmin;
   pointer-events: none;
-  */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,4 +66,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
