@@ -3,7 +3,7 @@ body{
   background-color: #849dce;
   background-image: url(./img/보라배경.svg);
   /* Set rules to fill background */ 
-   min-width: 100%; 
+   min-width: 1024px; 
    min-height: 650px;
    /* Set up proportionate scaling */ 
    background-size: cover;
@@ -14,21 +14,40 @@ body{
   color: white;
 }
 
-.info{
-  padding-left: 10vw;
-  padding-top: 25vh;
-  font-size: 3vh;
-  text-align: left;
+.App{
   display: inline-block;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
+.info{
+  padding-left: 2vw;
+  padding-top: 20vh;
+  font-size: 3vh;
+  text-align: left;
+}
+
+
 .info2{
-  font-size: 5vh;
+  font-size: 6vh;
 }
 
 .table{
   display: inline-block;
-  padding-left: 40vw;
+  padding-left: 5vw;
+}
+
+#font{
+  font-size: 2vw;
+  margin: 0;
+}
+
+.button{
+  padding-top: 30vh;
+  padding-left: 13vw;
+}
+
+td{
+  padding:1.3vw;
 }
 
 /* 
