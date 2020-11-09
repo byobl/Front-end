@@ -3,18 +3,21 @@
 }
 
 .btn{
-    padding: 8px 20px;
-    border-radius: 4px;
+    padding: 1vh 2.5vw;
+    border-radius: 10px;
     outline: none;
     border: none;
     cursor: pointer;
+    background: linear-gradient(20deg, rgba(150,0,230,50%) 20%, rgba(110, 2, 131, 0.7) 90%);
+    color: white;
+    font-size: 1.5vw;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
 .btn:hover{
-    padding : 8px 20px;
+    padding : 1.3vh 2.7vw;
     transition: all 0.3s ease-out;
-    background: rgb(142, 44, 172);
+    background: linear-gradient(20deg, rgba(150,0,230,50%) 20%, rgb(68, 140, 235) 90%);
     color: white;
     transition: 250ms;
 }
@@ -36,12 +39,12 @@
     padding:8px 20px;
     border-radius: 4px;
     font-size: 18px;
-    color: white;
+    color: black;
 }
 
 .btn--large{
     padding: 12px 26px;
     border-radius: 4px;
     font-size: 20px;
-    color: white;
+    color: rgb(48, 44, 44);
 }
