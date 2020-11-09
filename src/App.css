@@ -1,6 +1,7 @@
 
+
 body{
-  background-color: #849dce;
+  background-color: #202122;
   background-image: url(./img/보라배경.svg);
   /* Set rules to fill background */ 
    min-width: 1024px; 
@@ -21,7 +22,7 @@ body{
 
 .info{
   padding-left: 2vw;
-  padding-top: 20vh;
+  padding-top: 0;
   font-size: 3vh;
   text-align: left;
 }
@@ -30,6 +31,8 @@ body{
 .info2{
   font-size: 6vh;
 }
+
+
 
 .table{
   display: inline-block;
@@ -42,8 +45,9 @@ body{
 }
 
 .button{
-  padding-top: 30vh;
-  padding-left: 13vw;
+  padding-top: 20vh;
+  padding-left: 15vw;
+  padding-right: 4vw;
 }
 
 td{

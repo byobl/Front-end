@@ -23,5 +23,5 @@ export const MenuItems =[
         title: '로그인',
         url: '#',
         cName: 'nav-links-mobile'
-    },
+    }
 ] 

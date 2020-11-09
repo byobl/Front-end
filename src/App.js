@@ -1,5 +1,5 @@
 import Button from '@material-ui/core/Button';
-import Navbar from "./Components/Navbar/Navbar.js";
+import Navbar from "./Components/Navbar/Navbar";
 import './App.css';
 
 const style = {
@@ -28,24 +28,30 @@ const style2 = {
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <div className="nav">
+        <Navbar></Navbar>
+      </div>
       <table className="table">
-      
-      <tr><td>
-          <div className="info">
-            <p className="info2">Sillock</p>
-            <p>사실을 있는 그대로 적은 기록</p>
-            <p>그리고 블록체인</p>
-          </div>
-       </td>
+      <tr>
+        <td>
+            <div className="info">
+              <p className="info2">Sillock</p>
+              <p>사실을 있는 그대로 적은 기록</p>
+              <p>그리고 블록체인</p>
+            </div>
+        </td>
           <div className="button">
-            <td><Button style={style} variant="contained" id="font">지갑생성하기</Button></td>
-            <td><Button style={style2} variant="contained" id="font" >내 증명서 만들기</Button></td>
+            <td>
+              <Button style={style} variant="contained">
+                <p id="font">지갑생성하기</p>
+                {/* <p>이력을 보관 할 증명 지갑을 쉽고 간편하게 만들어 보세요!</p> */}
+                </Button>
+              </td>
+            <td><Button style={style2} variant="csontained" id="font" >내 증명서 만들기</Button></td>
            </div>
          </tr>
        </table>
 
-      
     </div>
   );
 }
