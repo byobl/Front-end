@@ -1,7 +1,7 @@
-import { Button } from '@material-ui/core';
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
-import { Buttons } from "./Button"
+import { Buttons} from "./Button"
+import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 class Navbar extends Component {
@@ -14,7 +14,7 @@ class Navbar extends Component {
     render() {
         return(
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Sillock<i className="fas fa-cubes"></i></h1>
+                <Link to="/home"><h1 className="navbar-logo">Sillock<i className="fas fa-cubes"></i></h1></Link>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
@@ -29,7 +29,7 @@ class Navbar extends Component {
                         )
                     })}
                 </ul>
-                <Buttons>로그인</Buttons>
+                <Link to="/login"><Buttons>로그인</Buttons></Link>
             </nav>
         )
     }

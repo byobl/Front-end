@@ -1,22 +1,14 @@
 import React, { Component } from 'react';
-import { Route,  Switch } from 'react-router-dom';
-import {CareerRegistration} from './index'
+
 
 class CertificateMain extends Component {
     render() {
         return (
             <div>
-                <p>certificateMain</p>
-                <p>certificateMain</p>
-                <p>certificateMain</p>
-                <p>certificateMain</p>
-                <Switch>
-                    <Route path='/' component={CareerRegistration} exact/>
-                </Switch>
-
-                <Route path='/careerRegistration' component={CareerRegistration} exact/>
+                <h1>내 증명서 만들기(CertificateMain) 화면 입니다.</h1>
             </div>
-        )
+            );
+        }
     }
-}
-export default CertificateMain;
+    
+    export default CertificateMain;

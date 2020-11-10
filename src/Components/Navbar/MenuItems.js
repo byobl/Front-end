@@ -1,7 +1,7 @@
 export const MenuItems =[
     {
         title: '실록소개',
-        url: '#',
+        url: '/home',
         cName: 'nav-links'
     },
     {
@@ -11,7 +11,7 @@ export const MenuItems =[
     },
     {
         title: '기업/기관',
-        url: '#',
+        url: '/institutionMain',
         cName: 'nav-links'
     },
     {
@@ -21,7 +21,7 @@ export const MenuItems =[
     },
     {
         title: '로그인',
-        url: '#',
+        url: '/login',
         cName: 'nav-links-mobile'
     }
 ] 

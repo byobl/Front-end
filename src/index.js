@@ -1,13 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import UserMain from "./UserMain";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,Route } from 'react-router-dom';
+
+import Home from "./home";
+import UserMain from "./UserMain";
+import InstitutionMain from "./InstitutionMain"
+import LogIn from "./UserInfo/logIn"
+import WalletMain from "./User/Wallet/walletMain"
+import CertificateMain from "./User/Certificate/certificateMain"
 
 ReactDOM.render(
   <BrowserRouter>
-     <UserMain/>
+  <Route path="/" component={UserMain} exact />
+  <Route path="/home" component={Home} exact />
+  <Route path="/institutionMain" component={InstitutionMain} exact />
+  <Route path="/login" component={LogIn} exact />
+  <Route path="/walletMain" component={WalletMain} exact />
+  <Route path="/certificateMain" component={CertificateMain} exact />
   </BrowserRouter>,
   document.getElementById("root")
 );

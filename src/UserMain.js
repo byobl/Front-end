@@ -1,6 +1,6 @@
 import Button from '@material-ui/core/Button';
 import Navbar from "./Components/Navbar/Navbar";
-import { Route, Link, Switch,BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './UserMain.css';
 
 
@@ -45,12 +45,14 @@ function UserMain() {
         </td>
           <div className="button">
             <td>
-              <Button style={style} variant="contained">
+              <Link to="/walletMain"><Button style={style} variant="contained">
                 <p id="font">지갑생성하기</p>
                 {/* <p>이력을 보관 할 증명 지갑을 쉽고 간편하게 만들어 보세요!</p> */}
-                </Button>
+                </Button></Link>
               </td>
-            <td><Button style={style2} variant="csontained" id="font" >내 증명서 만들기</Button></td>
+            <td>
+              <Link to="/certificateMain"><Button style={style2} variant="csontained" id="font" >내 증명서 만들기</Button></Link>
+              </td>
            </div>
          </tr>
        </table>

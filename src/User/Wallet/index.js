@@ -1,0 +1,1 @@
+export { default as WalletMain } from './walletMain';
