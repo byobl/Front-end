@@ -1,23 +1,25 @@
 
 
 body{
-  background-color: #202122;
-  background-image: url(./img/보라배경.svg);
-  /* Set rules to fill background */ 
    min-width: 1024px; 
    min-height: 650px;
-   /* Set up proportionate scaling */ 
-   background-size: cover;
-   height: auto;
-
-  background-repeat: no-repeat;
-  display: flex;
-  color: white;
 }
 
-.App{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.UserMain{
   display: inline-block;
   font-family: 'Noto Sans KR', sans-serif;
+  background-image: url(./img/보라배경.svg);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  left: 0;
+  color: white;
 }
 
 .info{
@@ -26,7 +28,6 @@ body{
   font-size: 3vh;
   text-align: left;
 }
-
 
 .info2{
   font-size: 6vh;

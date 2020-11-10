@@ -1,6 +1,8 @@
 import Button from '@material-ui/core/Button';
 import Navbar from "./Components/Navbar/Navbar";
-import './App.css';
+import { Route, Link, Switch,BrowserRouter } from 'react-router-dom';
+import './UserMain.css';
+
 
 const style = {
   background: 'linear-gradient(20deg, rgba(150,0,230,50%) 30%, rgba(180,0,185,70%) 90%)',
@@ -25,12 +27,13 @@ const style2 = {
   display:'flex'
 };
 
-function App() {
+function UserMain() {
   return (
-    <div className="App">
-      <div className="nav">
+    <div className="UserMain">
+     <div className="nav">
         <Navbar></Navbar>
       </div>
+      
       <table className="table">
       <tr>
         <td>
@@ -51,9 +54,9 @@ function App() {
            </div>
          </tr>
        </table>
-
+       
     </div>
   );
 }
-export default App;
+export default UserMain;
 

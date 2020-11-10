@@ -1,7 +1,7 @@
 import { Button } from '@material-ui/core';
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
-import { Buttons } from "../Button"
+import { Buttons } from "./Button"
 import './Navbar.css'
 
 class Navbar extends Component {

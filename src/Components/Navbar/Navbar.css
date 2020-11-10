@@ -10,6 +10,7 @@
 .nav{
     background: white;
     min-height: 70px;
+    top: 0;
 }
 .navbar-logo{
     color : blueviolet;
@@ -37,7 +38,7 @@
 .nav-links{
     color: black;
     text-decoration: none;
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .nav-links:hover {
@@ -64,6 +65,8 @@
         width: 100vw;
     }
     .nav{
+        top: 0;
+        left: -10%;
         background: white;
     }
     .fa-cubes{
@@ -81,7 +84,7 @@
         height: 100vh;
         position: absolute;
         top: 80px;
-        left: -100%;
+        left: -150%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 1;
@@ -89,7 +92,8 @@
     }
     .nav-menu.active{
         background: rgb(73, 70, 70);
-        left: -5%;
+        height: 270vh;
+        left: 0%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 1;
@@ -97,7 +101,7 @@
     .nav-links{
         text-align: start;
         padding: 7vw;
-        left: -50%;
+        left: -100%;
         color: white;
         width: 100vw;
         display: table;
@@ -108,7 +112,7 @@
     }
     .navbar-logo{
         position: absolute;
-        top: -2vh;
+        top: 0;
         left: -3%;
         transform: translate(25%, 50%);
         font-size: 4vw;
