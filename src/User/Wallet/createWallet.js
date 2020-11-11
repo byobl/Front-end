@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 
-class WalletMain extends Component {
+class CreateWallet extends Component {
     render() {
         return (
             <div>
                 <div>
-                    <h5>지갑 생성하기(WalletMain) 화면 입니다.</h5>
+                    <h5>본인인증</h5>
                 </div>
                 <div>
-                    <h5>지갑가져오기</h5>
+                    <h5>핸드폰 번호</h5>
                 </div>
             </div>
 
@@ -17,4 +17,4 @@ class WalletMain extends Component {
         }
     }
     
-    export default WalletMain;
+    export default CreateWallet;
