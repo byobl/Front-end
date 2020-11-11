@@ -46,13 +46,13 @@ class InstitutionMain extends Component {
                 </td>
                   <div className="button">
                     <td>
-                      <Link to="/issureRegister"><Button style={style} variant="contained">
-                        <p id="font">발행기관 전용</p>
+                      <Link to="/issureRegister" style={{ textDecoration: 'none' }}><Button style={style} variant="contained">
+                        <p id="font">발행기관전용</p>
                         {/* <p>이력을 보관 할 증명 지갑을 쉽고 간편하게 만들어 보세요!</p> */}
                         </Button></Link>
                       </td>
                     <td>
-                      <Link to="/dashboard"><Button style={style2} variant="csontained" id="font" >검증기관 전용</Button></Link>
+                      <Link to="/dashboard" style={{ textDecoration: 'none' }}><Button style={style2} variant="csontained" id="font" >검증기관 전용</Button></Link>
                       </td>
                    </div>
                  </tr>

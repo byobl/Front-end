@@ -1,4 +1,44 @@
 .CertificateMain{
-    background-color: skyblue;
-    background-size: 100vmax;
+    background-color: #9DB7FF;
+    height: 100vh;
 }
+
+.text{
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 9vh;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+}
+
+.sillock{
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.4rem;
+    padding-left: 1em;
+    padding-top: 0.5em;
+}
+
+#table{
+    color: white;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+
+#button{
+    color: white;
+    font-size: 2.5vw;
+    border-radius: 20px;
+    border-color: white;
+    border-width: 3px;
+    background-color: rgb(255, 255, 255, 0.13);
+    font-weight: bold;
+}
+
+td{
+    padding:2vw;
+  }
