@@ -7,9 +7,11 @@ import { BrowserRouter,Route } from 'react-router-dom';
 import Home from "./home";
 import UserMain from "./UserMain";
 import InstitutionMain from "./InstitutionMain"
-import LogIn from "./UserInfo/logIn"
-import WalletMain from "./User/Wallet/walletMain"
-import CertificateMain from "./User/Certificate/certificateMain"
+import {LogIn} from "./UserInfo/index"
+import {WalletMain} from "./User/Wallet/index"
+import {CertificateMain} from "./User/Certificate/index"
+import {IssureRegister} from "./Institute/Issuer/index"
+import {Dashboard} from "./Institute/Verifier/index"
 
 ReactDOM.render(
   <BrowserRouter>
@@ -19,6 +21,8 @@ ReactDOM.render(
   <Route path="/login" component={LogIn} exact />
   <Route path="/walletMain" component={WalletMain} exact />
   <Route path="/certificateMain" component={CertificateMain} exact />
+  <Route path="/issureRegister" component={IssureRegister} exact />
+  <Route path="/dashboard" component={Dashboard} exact />
   </BrowserRouter>,
   document.getElementById("root")
 );

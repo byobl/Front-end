@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button';
 import Navbar from "./Components/Navbar/Navbar";
 import { Link } from 'react-router-dom';
-import './UserMain.css';
+import './Main.css';
 
 
 const style = {
