@@ -40,4 +40,8 @@
 }
 .txt{
     font-size: 1.5vw;
+    padding-bottom: 3vh;
+}
+#outlined-secondary{
+    width: 80vw;
 }
