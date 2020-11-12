@@ -8,8 +8,8 @@ import Home from "./home";
 import UserMain from "./UserMain";
 import InstitutionMain from "./InstitutionMain"
 import {LogIn} from "./UserInfo/index"
-import {WalletMain, CreateWallet} from "./User/Wallet/index"
-import {CertificateMain,CareerRegistration, MyCombination} from "./User/Certificate/index"
+import {WalletMain} from "./User/Wallet/index"
+import {CertificateMain, CareerRegistration, MyCombination, CareerInstitution,CareerRequest} from "./User/Certificate/index"
 import {IssureRegister} from "./Institute/Issuer/index"
 import {Dashboard} from "./Institute/Verifier/index"
 
@@ -26,6 +26,8 @@ ReactDOM.render(
   <Route path="/dashboard" component={Dashboard} exact />
   <Route path="/certificate/careerRegistration" component={CareerRegistration} exact />
   <Route path="/certificate/MyCombination" component={MyCombination} exact />
+  <Route path="/certificate/careerInstitution" component={CareerInstitution} exact />
+  <Route path="/certificate/careerRequest" component={CareerRequest} exact />
   </BrowserRouter>,
   document.getElementById("root")
 );
