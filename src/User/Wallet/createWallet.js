@@ -19,9 +19,9 @@ class CreateWallet extends Component {
                         <p className="txt2">원활한 Sillock 서비스 이용을 위해 최초 1회 인증이 필요합니다.</p>
                     </div>
                     <div className="contents">
-                        <div>
+                        <div className="conlayout">
                             <form>
-                                <div>
+                                <div className="layout">
                                     <TextField
                                     id="input"
                                     label="Email"
@@ -44,7 +44,7 @@ class CreateWallet extends Component {
                     </div>
                     <div className="stepButton">
                         <form>
-                            <Button type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button>                 
+                            <Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button>                 
                         </form>
                     </div>
                 </div>
