@@ -32,6 +32,8 @@
 .content{
     padding-top: 10vh;
     padding-left: 8vw;
+    height: 75vh;
+    width: 90vw;
 }
 .title2{
     font-weight: bold;
@@ -43,5 +45,20 @@
     padding-bottom: 3vh;
 }
 #outlined-secondary{
-    width: 80vw;
+    width: 68vw;
+}
+.submit{
+    width: 10vw;
+    height: 55px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.6vw;
+    font-weight: bold;
+
+}
+.MuiDataGrid-root{
+    margin-top: 5vh;
+    border: none;
 }

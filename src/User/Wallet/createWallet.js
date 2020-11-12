@@ -9,38 +9,35 @@ class CreateWallet extends Component {
         return (
             <div className="CreateWallet">
                 <div className="Step">
-                    <h1>
-                        본인인증
-                    </h1>
-                    <p>이메일 주소를 입력해 주세요</p>
+                    <p className="title">본인인증</p>
+                    <hr className="line"></hr>
+                    <p className="txt">이메일 주소를 입력해 주세요</p>
                 </div>
                 <div className="Contents">
                     <div className="contentsName">
-                        <h2>
-                            이메일 주소
-                        </h2>
-                        <h4>원활한 Sillock 서비스 이용을 위해 최초 1회 인증이 필요합니다.</h4>
+                        <p className="title2">이메일 주소</p>
+                        <p className="txt2">원활한 Sillock 서비스 이용을 위해 최초 1회 인증이 필요합니다.</p>
                     </div>
                     <div className="contents">
                         <div>
                             <form>
                                 <div>
                                     <TextField
-                                    id="EmailAddress"
+                                    id="input"
                                     label="Email"
                                     type="Email"
                                     variant="outlined"
                                     />
-                                    <Button type="submit" variant="contained" value="EmailRequest" className="EmailRequest">인증코드 받기</Button>
+                                    <Button id= "btn" type="submit" variant="contained" value="EmailRequest" className="EmailRequest">인증코드 받기</Button>
                                 </div>
                                 <div>
                                     <TextField
-                                    id="AuthenticationCode"
+                                    id="input"
                                     label="Code"
                                     type="Code"
                                     variant="outlined"
                                     />
-                                    <Button type="submit" variant="contained" value="CodeCheck" className="CodeCheck">인증확인</Button>
+                                    <Button id= "btn" type="submit" variant="contained" value="CodeCheck" className="CodeCheck">인증확인</Button>
                                 </div>
                             </form>
                         </div>

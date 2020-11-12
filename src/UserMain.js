@@ -36,10 +36,10 @@ function UserMain() {
       
       <table className="table">
       <tr>
-        <td>
+        <td >
             <div className="info">
               <p className="info2">Sillock</p>
-              <p>사실을 있는 그대로 적은 기록</p>
+              <p >사실을 있는 그대로 적은 기록</p>
               <p>그리고 블록체인</p>
             </div>
         </td>
@@ -51,7 +51,9 @@ function UserMain() {
                 </Button></Link>
               </td>
             <td>
-              <Link to="/certificateMain" style={{ textDecoration: 'none' }}><Button style={style2} variant="csontained" id="font" >내 증명서 만들기</Button></Link>
+              <Link to="/certificateMain" style={{ textDecoration: 'none' }}>
+                <Button style={style2} variant="csontained" id="font" >내 증명서 만들기</Button>
+                </Link>
               </td>
            </div>
          </tr>
