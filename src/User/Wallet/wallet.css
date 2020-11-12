@@ -1,0 +1,33 @@
+.CreateWallet:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.Step{
+    background-color: blueviolet;
+    float: left;
+    height: 100vh;
+    width: 40vw;
+    color:white;
+    text-align: center;
+    padding-top: 30vh;
+}
+.Contents{
+    content:"";
+    float: left;
+    width: 60vw;
+}
+.contentsName{
+    padding-left: 10vh;
+    padding-top: 10vh;
+    height: 30vh;
+}
+.contents{
+    height: 50vh;
+}
+.stepButton{
+    height: 20vh;
+}
+#PhoneNumber{
+
+}
