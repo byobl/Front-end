@@ -45,8 +45,7 @@ function UserMain() {
         </td>
           <div className="button">
             <td>
-              <Link to="/walletMain" style={{ textDecoration: 'none' }}>
-                <Button style={style} variant="contained">
+              <Link to="/wallet/walletMain" style={{ textDecoration: 'none' }}><Button style={style} variant="contained">
                 <p id="font">지갑생성하기</p>
                 {/* <p>이력을 보관 할 증명 지갑을 쉽고 간편하게 만들어 보세요!</p> */}
                 </Button></Link>

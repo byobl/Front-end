@@ -19,7 +19,8 @@ ReactDOM.render(
   <Route path="/home" component={Home} exact />
   <Route path="/institutionMain" component={InstitutionMain} exact />
   <Route path="/login" component={LogIn} exact />
-  <Route path="/walletMain" component={WalletMain} exact />
+  <Route path="/wallet/walletMain" component={WalletMain} exact />
+  <Route path="/wallet/createWallet" component={CreateWallet} exact /> 
   <Route path="/certificateMain" component={CertificateMain} exact />
   <Route path="/issureRegister" component={IssureRegister} exact />
   <Route path="/dashboard" component={Dashboard} exact />
