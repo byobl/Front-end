@@ -4,9 +4,10 @@ import stepimg from "./이력step1.svg";
 import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import {DataGrid} from '@material-ui/data-grid';
+import Button from '@material-ui/core/Button';
 
 const columns = [
-    { field: 'id', headerName: '번호', width: 100 },
+    { field: 'id', headerName: '기관코드', width: 100 },
     { field: 'firstName', headerName: '기관명', width: 330 }
   ];
   
@@ -27,6 +28,7 @@ class CareerRegistration extends Component {
     render() {
         return (
             <div>
+            <div className="career">
                 <div className="header">
                     <Link to="/" style={{ textDecoration: 'none' }}>
                         <p className="bold">Sillock</p></Link>
@@ -50,9 +52,12 @@ class CareerRegistration extends Component {
                         />
                     <input type="submit" value="검색" className="submit"></input>
                     </form>
+                    <div></div>
                     <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
-                    
                 </div>
+                </div>
+                <div className="buttons"><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button>
+                <Link to="/certificate/careerInstitution" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link></div>
             </div>
             );
         }
