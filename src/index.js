@@ -7,8 +7,8 @@ import { BrowserRouter,Route } from 'react-router-dom';
 import Home from "./home";
 import UserMain from "./UserMain";
 import InstitutionMain from "./InstitutionMain"
-import {LogIn} from "./UserInfo/index"
-import {WalletMain} from "./User/Wallet/index"
+import {LogIn, Join} from "./UserInfo/index"
+import {WalletMain, CreateWallet} from "./User/Wallet/index"
 import {CertificateMain, CareerRegistration, MyCombination, CareerInstitution,CareerRequest} from "./User/Certificate/index"
 import {IssureRegister} from "./Institute/Issuer/index"
 import {Dashboard} from "./Institute/Verifier/index"
@@ -18,7 +18,8 @@ ReactDOM.render(
   <Route path="/" component={UserMain} exact />
   <Route path="/home" component={Home} exact />
   <Route path="/institutionMain" component={InstitutionMain} exact />
-  <Route path="/login" component={LogIn} exact />
+  <Route path="/userinfo/login" component={LogIn} exact />
+  <Route path="/userinfo/Join" component={Join} exact />
   <Route path="/wallet/walletMain" component={WalletMain} exact />
   <Route path="/wallet/createWallet" component={CreateWallet} exact /> 
   <Route path="/certificateMain" component={CertificateMain} exact />
