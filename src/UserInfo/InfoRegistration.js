@@ -39,7 +39,7 @@ class InfoRegistration extends Component {
             ret = error.response;
             ret = ret.data;
             console.log(ret);
-            alert("이미 존재하는 유저입니다");
+            alert("Error");
         });
 
         this.setState({ message: ret.message});
