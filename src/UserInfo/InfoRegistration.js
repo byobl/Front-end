@@ -1,50 +1,69 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
 import "./signUp.css"
+import axios from 'axios';
 
 class InfoRegistration extends Component {
+    
+    // constructor(props) {
+    //     super(props);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
+    //   }
+    
+    // //   handleSubmit(e) {
+    // //     e.preventDefault();
+    // //     var pw1 = document.getElementById( 'pw1' ).value;
+    // //     var pw2 = document.getElementById( 'pw2' ).value;
+    // //     var name = document.getElementById( 'name' ).value;
+    // //         console.log(pw1);
+    // //     }
+        
+     
 
-    comparePwd(_pwd1,_pwd2){
-        var pwd1 = _pwd1;
-        var pwd2 = _pwd2;
-        if(pwd1 === pwd2) return true;
-        else return false;
-    }
+    state = {
+        message : "아직 응답이 없습니다"
+    };
 
+    async onClickBtn(){ 
+        var ret;
+        await axios.post('http://35.232.159.201:3000/api/auth/register',
+        {
+            "name": "한승둡이두밥",
+            "userId": "하나ededd@byoble.com",
+            "password": "passwosdrd"
+          })
+          .then(function (response) {
+            ret = response.data;
+            console.log(ret.message);
+        })
+        .catch(function (error) {
+            ret = error.response;
+            ret = ret.data;
+            console.log(ret);
+            alert("이미 존재하는 유저입니다");
+        });
 
+        this.setState({ message: ret.message});
+            
+      }
     render() {
-        var result = this.comparePwd();
-
         return (
             <div >
-                <h1>회원가입하기(InfoRegistration) 입니다.</h1>
-                <form>
-                    <table>
-                        <tr>
-                            <td>이름</td>
-                            <td><input type="text" name="name" id="name"></input>
-                                {/* <Button variant="contained" color="primary">중복확인</Button> */}</td>
-                        </tr>
-                        <tr>
-                            <td>비밀번호</td>
-                            <td><input type="password" name="pwd1"></input></td>
-                        </tr>
-                        <tr>
-                            <td>비밀번호 확인</td>
-                            <td><input type="password" name="pwd2"></input></td>
-                        </tr>
-                        <tr>
-                            <td>이메일</td>
-                            <td><input type="text" name="email"></input><select name="items1">
+                <h1>회원가입하기(InfoRegistration) 입니다.</h1><br/><br/>
+                <form onSubmit={this.handleSubmit}>
+                    <label># 이름 <input type="text" name="name" id="name" placeholder="이름" required></input></label><br/><br/>
+                                    {/* <Button variant="contained" color="primary">중복확인</Button> */}
+                    <label>#  비밀번호 <input type="password" name="pwd1" placeholder="비밀번호" required></input></label><br/><br/>
+                    <label>#   비밀번호 확인 <input type="password" name="pwd2" placeholder="비밀번호" required></input></label><br/><br/>
+                    <label>#   이메일 <input type="text" name="email" placeholder="Email" required></input><select name="items1">
                                                                     <option value="naver">@naver.com</option>
                                                                     <option value="google">@google.com</option>
                                                                     <option value="daum">@daum.com</option>
-                                                                </select>
-                            </td>
-                        </tr>
-                    </table> 
-                    <input type="submit" value="회원가입하기" className="info"></input> 
-                </form>
+                                                                </select></label>
+                    {/* <input type="submit" value="회원가입하기" className="info"></input>  */}
+                </form><br/><br/>
+                <button className='button' onClick={(e) => { this.onClickBtn() }}> 회원가입 정보 보내기 버튼</button>
+                <div> -- 서버에서 온 값 : "{this.state.message}" </div>
+                
             </div>
             );
         }
