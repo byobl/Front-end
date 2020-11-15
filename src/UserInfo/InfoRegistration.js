@@ -13,6 +13,8 @@ class InfoRegistration extends Component {
 
 
     render() {
+        var result = this.comparePwd();
+
         return (
             <div >
                 <h1>회원가입하기(InfoRegistration) 입니다.</h1>
@@ -20,28 +22,28 @@ class InfoRegistration extends Component {
                     <table>
                         <tr>
                             <td>이름</td>
-                            <td><input type="text"></input>
-                                <Button variant="contained" color="primary">중복확인</Button></td>
+                            <td><input type="text" name="name" id="name"></input>
+                                {/* <Button variant="contained" color="primary">중복확인</Button> */}</td>
                         </tr>
                         <tr>
                             <td>비밀번호</td>
-                            <td><input type="password"></input></td>
+                            <td><input type="password" name="pwd1"></input></td>
                         </tr>
                         <tr>
                             <td>비밀번호 확인</td>
-                            <td><input type="password"></input></td>
+                            <td><input type="password" name="pwd2"></input></td>
                         </tr>
                         <tr>
                             <td>이메일</td>
-                            <td><input type="text"></input><select name="items1">
+                            <td><input type="text" name="email"></input><select name="items1">
                                                                     <option value="naver">@naver.com</option>
                                                                     <option value="google">@google.com</option>
                                                                     <option value="daum">@daum.com</option>
                                                                 </select>
                             </td>
                         </tr>
-                    </table>
-                    <input type="submit" value="회원가입하기" className="info"></input>
+                    </table> 
+                    <input type="submit" value="회원가입하기" className="info"></input> 
                 </form>
             </div>
             );
