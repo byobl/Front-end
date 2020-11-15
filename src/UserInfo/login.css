@@ -1,0 +1,35 @@
+.LogIn:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.box1{
+    float: left;
+    height: 100vh;
+    width: 50vw;
+    color:white;
+    text-align: center;
+    padding-top: 30vh;
+}
+.box2{
+    padding-top: 8vh;
+    padding-left: 8vh;
+    content:"";
+    float: left;
+    height: 100vh;
+    width: 50vw;
+}
+#inputlogin{
+    height: 5vh;
+    width: 30vw;
+}
+#checkbtn{   
+    background-color: blueviolet;
+    color: white; 
+    font-weight: bold;
+    width: 30vw;
+    height: 3vh;
+    display: block;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
