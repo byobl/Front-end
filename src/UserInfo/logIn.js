@@ -39,16 +39,18 @@ class LogIn extends Component {
           .then(function (response) {
             ret = response.data;
             console.log(ret.message);
+            console.log(ret);
         })
         .catch(function (error) {
             ret = error.response;
+            console.log(ret);
             ret = ret.data;
             console.log(ret);
             alert("Error");
             //에러 페이지 세분화
         });
+
         this.setState({ message: ret.message});
-        console.log(this.state.message);
       }
 
     render() {
@@ -80,7 +82,7 @@ class LogIn extends Component {
                         />
                         </div>
                         <div>
-                            <Button id="checkbtn" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>확인</Button>
+                            <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>확인</Button>
                         </div>
                         <div> -- 서버에서 온 값 : "{this.state.message}" </div>
                     </form>
