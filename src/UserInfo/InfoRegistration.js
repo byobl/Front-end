@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import "./signUp.css"
 import axios from 'axios';
 
+// // 비밀번호 두번 입력 동일한지 확인하는 함수
+// function comparePwd(){
+//       if( this.state.pwd1 != this.state.pwd2 ){
+//       console.log("비밀번호 불일치");
+//       return false;
+//     } else{
+//       console.log("비밀번호가 일치합니다");
+//       return true;
+//     }
+// }
 
 class InfoRegistration extends Component {
     
@@ -17,6 +27,7 @@ class InfoRegistration extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.comparePwd = this.comparePwd.bind(this);
       }
     
       handleChange(e) {
@@ -32,40 +43,50 @@ class InfoRegistration extends Component {
           });
       }
     
-      handleSubmit(event) {
+      handleSubmit(e) {
         alert('A name was submitted: ' + this.state.user);
-        event.preventDefault();
+        e.preventDefault();
       }
 
-
-      
-    // state = {
-    //     message : "아직 응답이 없습니다"
-    // };
+      comparePwd(){
+      if( this.state.pwd1 != this.state.pwd2 ){
+              console.log("비밀번호 불일치");
+              return false;
+            } else{
+              console.log("비밀번호가 일치합니다");
+              return true;
+            }
+        }
 
     async onClickBtn(){ 
         var ret;
-        await axios.post('http://35.232.159.201:3000/api/auth/register',
-        {
-            "name": this.state.name,
-            "userId": this.state.email,
-            "password": this.state.pwd1
-          })
-          .then(function (response) {
-            ret = response.data;
-            console.log(ret.message);
-            console.log(ret);
-        })
-        .catch(function (error) {
-            ret = error.response;
-            console.log(ret);
-            ret = ret.data;
-            console.log(ret);
-            console.log(this.state.name);
-            alert("이미 존재하는 유저입니다.");
-        });
-
-        this.setState({ message: ret.message});
+        const compare = this.comparePwd();
+        if(compare == true ){ // 비밀번호가 일치하면
+            await axios.post('http://35.232.159.201:3000/api/auth/register',
+            {
+                "name": this.state.name,
+                "userId": this.state.email,
+                "password": this.state.pwd1
+              })
+              .then(function (response) {
+                ret = response.data;
+                console.log(ret.message);
+                console.log(ret);
+            })
+            .catch(function (error) {
+                ret = error.response;
+                console.log(ret);
+                ret = ret.data;
+                console.log(ret);
+                alert("이미 존재하는 유저입니다.");
+            });
+    
+            this.setState({ message: ret.message});
+        }
+        else{ //아니면
+            alert("입력된 두 비밀번호가 다릅니다. 다시 확인해주세요");
+        }
+        
             
       }
 
