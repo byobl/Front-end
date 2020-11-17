@@ -86,7 +86,7 @@ class InfoRegistration extends Component {
 
     render() {
         return (
-            <div >
+            <div>
                 <h1>회원가입하기(InfoRegistration) 입니다.</h1><br/><br/>
                 <form >
                     <label># 이름 <input type="text" name="name" 
