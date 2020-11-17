@@ -26,7 +26,6 @@ class InfoRegistration extends Component {
             // user:[]
         };
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.comparePwd = this.comparePwd.bind(this);
       }
     
@@ -43,11 +42,6 @@ class InfoRegistration extends Component {
           });
       }
     
-      handleSubmit(e) {
-        alert('A name was submitted: ' + this.state.user);
-        e.preventDefault();
-      }
-
       comparePwd(){
       if( this.state.pwd1 != this.state.pwd2 ){
               console.log("비밀번호 불일치");
@@ -94,7 +88,7 @@ class InfoRegistration extends Component {
         return (
             <div >
                 <h1>회원가입하기(InfoRegistration) 입니다.</h1><br/><br/>
-                <form onSubmit={this.handleSubmit}>
+                <form >
                     <label># 이름 <input type="text" name="name" 
                         onChange={this.handleChange} placeholder="이름" required></input></label><br/><br/>
                                     {/* <Button variant="contained" color="primary">중복확인</Button> */}
