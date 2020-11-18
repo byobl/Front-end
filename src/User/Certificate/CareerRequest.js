@@ -27,8 +27,8 @@ class CareerRequest extends Component {
                 </div>
                 <div className="buttons">
                 <Link to="/certificate/careerInstitution" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
-                <Link to="/" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link></div>
-            </div>
+                <Link to="/certificate/announcement" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link></div>
+                </div>
             );
         }
     }

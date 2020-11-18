@@ -4,3 +4,8 @@ export { default as MyCombination } from './myCombination';
 export { default as CareerInstitution } from './CareerInstitution';
 export { default as CareerRequest } from './CareerRequest';
 export { default as Announcement } from './announcement'; 
+export { default as MyChoice } from './MyChoice'; 
+export { default as MyPrintForm } from './MyPrintForm'; 
+export { default as MyTypeForm } from './MyTypeForm'; 
+export { default as MyIssueForm } from './MyIssueForm'; 
+export { default as CertificateResult } from './certificateResult'; 

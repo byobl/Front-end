@@ -8,8 +8,10 @@ import Home from "./home";
 import UserMain from "./UserMain";
 import InstitutionMain from "./InstitutionMain"
 import {LogIn,Join,SignUp,InfoRegistration,EmailAuth} from "./UserInfo/index"
+
+import {CertificateMain, CareerRegistration, MyCombination, CareerInstitution, CareerRequest, 
+  Announcement,MyChoice,MyPrintForm,MyIssueForm,MyTypeForm,CertificateResult} from "./User/Certificate/index"
 import {WalletMain, IdentityVerification, CreateWallet, LoadWallet, FirstStep, SecondStep, ThirdStep, UploadWallet, CompleteCreation, FailAccess, FailAccess2} from "./User/Wallet/index"
-import {CertificateMain, CareerRegistration, MyCombination, CareerInstitution, CareerRequest, Announcement} from "./User/Certificate/index"
 import {IssureRegister} from "./Institute/Issuer/index"
 import {Dashboard} from "./Institute/Verifier/index"
 
@@ -38,10 +40,15 @@ ReactDOM.render(
   <Route path="/issureRegister" component={IssureRegister} exact />
   <Route path="/dashboard" component={Dashboard} exact />
   <Route path="/certificate/careerRegistration" component={CareerRegistration} exact />
-  <Route path="/certificate/MyCombination" component={MyCombination} exact />
+  <Route path="/certificate/myCombination" component={MyCombination} exact />
   <Route path="/certificate/careerInstitution" component={CareerInstitution} exact />
   <Route path="/certificate/careerRequest" component={CareerRequest} exact />
   <Route path="/certificate/announcement" component={Announcement} exact />
+  <Route path="/certificate/myChoice" component={MyChoice} exact />
+  <Route path="/certificate/myPrintForm" component={MyPrintForm} exact />
+  <Route path="/certificate/myTypeForm" component={MyTypeForm} exact />
+  <Route path="/certificate/myIssueForm" component={MyIssueForm} exact />
+  <Route path="/certificate/certificateResult" component={CertificateResult} exact />
   </BrowserRouter>,
   document.getElementById("root")
 );
