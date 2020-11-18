@@ -1,3 +1,28 @@
+.signup{
+    margin-bottom: 30vh;
+}
+.header{
+    background-color: #9733ee;
+    color: white;
+    font-size: 2vw;
+}
+.bold{
+    font-weight: bold;
+    font-size: 3vw;
+    padding-top: 2vh;
+    padding-left: 2rem;
+    color: white;
+}
+.head{
+    background-color: #9733ee;
+    color: white;
+    text-align: center;
+}
+.etitle{
+    font-size: 4vw;
+    font-weight: bold;
+    padding-bottom: 10vh;
+}
 .tt{
     font-size: 20px;
     padding-left: 20px;
