@@ -3,33 +3,66 @@
     display: block;
     clear: both;
 }
+
 .box1{
-    float: left;
     height: 100vh;
     width: 50vw;
-    color:white;
-    text-align: center;
-    padding-top: 30vh;
+    color:black;
+    padding-top: 20vh;
+    padding-left: 30vh;
+    float: left;
+}
+.formtitle{
+    font-weight: bold;
+    padding-bottom: 3vh;
+    font-size: 2.7vw;
 }
 .box2{
+    display: block;
     padding-top: 8vh;
-    padding-left: 8vh;
+    padding-right: 8vh;
     content:"";
     float: left;
     height: 100vh;
     width: 50vw;
 }
+.form{
+    display: inline-block;
+    margin-top: 7vh;
+    margin-bottom: auto;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    line-height:10vh;
+    border-width : 2px 2px 2px 2px;
+    border-style : solid;
+    border-color : blueviolet;
+}
+.Logindex{
+    line-height:5vh;
+}
 #inputlogin{
     height: 5vh;
-    width: 30vw;
+    width: 25vw;
+    display: block;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 #checkbtn{   
     background-color: blueviolet;
     color: white; 
     font-weight: bold;
-    width: 30vw;
-    height: 3vh;
+    width: 25vw;
+    height: 6vh;
     display: block;
     margin-top: 2vh;
     margin-bottom: 2vh;
+}
+#btn-style{
+    height: 2vh;
+    border-right: 2px;
+    border-style: solid;
+    border-color : gray;
+    margin-left: 25vh;
 }

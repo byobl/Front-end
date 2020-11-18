@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 import "./login.css";
 import axios from 'axios';
 
@@ -92,6 +92,7 @@ class LogIn extends Component {
                 <div className="buttons">
                 <Link to="/" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
             <Link to="/userinfo/signup" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link>
+
                 </div>
             </div>
             );

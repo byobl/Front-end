@@ -5,9 +5,9 @@ import "./wallet.css";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-class CreateWallet extends Component {
+class LoadWallet extends Component {
     render() {
-        /*if 문 추가-> 최초 1회 인증 미완료 시 본인인증, 완료 시 생성 단계*/
+        /*if 문 추가-> 인증 실패시 fail 컴포넌트 */
         return (
             <div className="Wallet">
                 <div className="Step">
@@ -17,8 +17,8 @@ class CreateWallet extends Component {
                 </div>
                 <div className="Contents">
                     <div className="contentsName">
-                        <p className="w-title2">이메일 주소(createWallet)</p>
-                        <p className="w-txt2">원활한 Sillock 서비스 이용을 위해 최초 1회 인증이 필요합니다.</p>
+                        <p className="w-title2">이메일 주소(loadWallet)</p>
+                        <p className="w-txt2">내 Sillock을 가져오기 위해 인증이 필요합니다.</p>
                     </div>
                     <div className="contents">
                         <div className="conlayout">
@@ -46,7 +46,7 @@ class CreateWallet extends Component {
                     </div>
                     <div className="stepButton">
                         <form>
-                        <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button></Link>                 
+                            <Link to="/wallet/UploadWallet"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button></Link>          
                         </form>
                     </div>
                 </div>
@@ -54,4 +54,5 @@ class CreateWallet extends Component {
           );
     }
 }    
-export default CreateWallet;
+
+export default LoadWallet;

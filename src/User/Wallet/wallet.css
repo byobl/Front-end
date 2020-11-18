@@ -1,4 +1,4 @@
-.CreateWallet:after {
+.Wallet:after {
     content: "";
     display: block;
     clear: both;
@@ -10,40 +10,49 @@
     width: 40vw;
     color:white;
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 25vh;
 }
 .Contents{
-    padding-left: 8vh;
+    padding-left: 15vh;
     content:"";
     float: left;
     width: 60vw;
 }
 .contentsName{
     padding-top: 10vh;
-    height: 30vh;
-}
-.contents{
-    height: 50vh;
-}
-.stepButton{
     height: 20vh;
 }
-.title{
-    font-size: 4vw;
+.contents{
+    margin-top: auto;
+    margin-top: auto;
+    height: 40vh;
+}
+.stepButton{
+    height: 10vh;
+    margin-top: 10vh;
+}
+.w-title{
+    font-size: 3vw;
+    font-weight: bold;
+    padding-bottom: 5vh;
+}
+.w-title2{
     font-weight: bold;
     padding-bottom: 3vh;
-}
-.title2{
-    font-weight: bold;
-    padding-bottom: 3vh;
-    font-size: 2.7vw;
-}
-.txt{
     font-size: 2vw;
+}
+.w-txt{
+    font-size: 1.5vw;
     padding-top: 7vh;
 }
-.txt2{
-    font-size: 1.5vw;
+.w-txt2{
+    font-size: 1vw;
+}
+.w-txt3{
+    font-size: 1vw;
+    font-weight: bold;
+    padding-left: 1vh;
+    padding-bottom: 1vh;
 }
 .line{
     height: 0.3vh;
@@ -53,21 +62,37 @@
     margin-left: auto;
     margin-right: auto;
 }
-#input{
-    height: 5vh;
+#w-input{
+    height: 3vh;
     width: 35vw;
 }
-#btn{
+#w-btn{
     margin-left: 1vh;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
     background-color: blueviolet;
     color: white;
-    width: 7vw;
-    height: 9vh; 
+    width: 5vw;
+    height: 5vh; 
+    font-weight: bold;
+
+}
+#bigbtn{
+    margin-left: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+    background-color: black;
+    color: white;
+    width: 40vw;
+    height: 7vh; 
     font-weight: bold;
 
 }
 .conlayout{
     display: block;
+    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -76,12 +101,40 @@
     padding-bottom: 5vh;
     font-size: 3vw;
 }
+.layout2{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 3vw;
+}
+.layout3{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 3vw;
+}
 #subbtn{
     color: black;
+    background-color: blueviolet;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30vh;
     width: 7vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+#subbtn2{
+    color: black;
+    background-color: rgb(158, 157, 160);
+    display: inline-block;
+    margin-left: 10vh;
+    width: 10vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+#subbtn3{
+    color: black;
+    background-color: rgb(200, 150, 255);
+    display: inline-block;
+    margin-right: 10vh;
+    width: 10vw;
     height: 5vh; 
     font-weight: bold;
 }
