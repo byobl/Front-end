@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import "./login.css";
 import axios from 'axios';
 
@@ -38,8 +39,7 @@ class LogIn extends Component {
           })
           .then(function (response) {
             ret = response.data;
-            console.log(ret.message);
-            console.log(ret);
+            console.log("토큰"+ret.token);
         })
         .catch(function (error) {
             ret = error.response;
@@ -50,42 +50,48 @@ class LogIn extends Component {
             //에러 페이지 세분화
         });
 
-        this.setState({ message: ret.message});
+        this.setState({ message: ret.token});
       }
 
     render() {
         return (
-            <div className="LogIn">
-                <div className="box1">
-                </div>
-                <div className="box2">
-                    <form>
-                        <div>
-                        <TextField
-                            id="inputlogin"
-                            label="Id"
-                            type="id"
-                            placeholder="아이디" required
-                            onChange={this.handleChange}
-                            name="userId"
-                            />
-                        </div>
-                        <div>
-                        <TextField
-                            id="inputlogin"
-                            label="Password"
-                            type="password"
-                            placeholder="비밀번호" required
-                            onChange={this.handleChange}
-                            name="password"
+            <div>
+                <div className="LogIn">
+                    {/* <div className="box1">
+                    </div> */}
+                    <div className="box2">
+                        <form>
+                            <div>
+                            <TextField
+                                id="inputlogin"
+                                label="Id"
+                                type="id"
+                                placeholder="아이디" required
+                                onChange={this.handleChange}
+                                name="userId"
+                                />
+                            </div>
+                            <div>
+                            <TextField
+                                id="inputlogin"
+                                label="Password"
+                                type="password"
+                                placeholder="비밀번호" required
+                                onChange={this.handleChange}
+                                name="password"
 
-                        />
-                        </div>
-                        <div>
-                            <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>확인</Button>
-                        </div>
-                        <div> -- 서버에서 온 값 : "{this.state.message}" </div>
-                    </form>
+                            />
+                            </div>
+                            <div>
+                                <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>확인</Button>
+                            </div>
+                            <div> -- 서버에서 온 토큰값 : "{this.state.message}" </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="buttons">
+                <Link to="/" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
+            <Link to="/userinfo/signup" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link>
                 </div>
             </div>
             );

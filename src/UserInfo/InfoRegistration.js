@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./signUp.css"
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 // // 비밀번호 두번 입력 동일한지 확인하는 함수
 // function comparePwd(){
@@ -109,7 +111,10 @@ class InfoRegistration extends Component {
                 <button className='button' onClick={(e) => { this.onClickBtn() }}> 회원가입 정보 보내기 버튼</button> <br/>
                 -- 서버에서 온 값 : "{this.state.message}" 
                 </div>
-                
+                <div className="buttons">
+                 <Link to="/certificate/signup" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
+                <Link to="/userinfo/Join" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link>
+            </div>
             </div>
             );
         }
