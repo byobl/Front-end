@@ -49,6 +49,8 @@ class LogIn extends Component {
             console.log(ret);
             alert("Error");
             //에러 페이지 세분화
+            //회원가입 x.
+            //올바른 로그인 정보를 입력해주세요.
         });
 
         this.setState({ message: ret.message});
