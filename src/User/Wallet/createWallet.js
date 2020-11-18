@@ -54,4 +54,5 @@ class CreateWallet extends Component {
           );
     }
 }    
+
 export default CreateWallet;

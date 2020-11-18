@@ -24,7 +24,7 @@ ReactDOM.render(
   <Route path="/userinfo/login" component={LogIn} exact />
   <Route path="/userinfo/signup" component={SignUp} exact />
   <Route path="/userinfo/infoRegistration" component={InfoRegistration} exact />
-  <Route path="/userinfo/emailAuth" component={EmailAuth} exact />
+  <Route path="/userinfo/EmailAuth" component={EmailAuth} exact />
   <Route path="/wallet/walletMain" component={WalletMain} exact />
   <Route path="/wallet/IdentityVerification" component={IdentityVerification} exact />
   <Route path="/wallet/createWallet" component={CreateWallet} exact />

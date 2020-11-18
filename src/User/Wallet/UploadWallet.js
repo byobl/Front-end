@@ -39,7 +39,7 @@ class UploadWallet extends Component {
                     </div>
                     <div className="stepButton">
                         <form>
-                        <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">지갑찾기</Button></Link>                 
+                        <Link to="/wallet/failAccess"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">지갑찾기</Button></Link>                 
                         </form>
                     </div>
                 </div>
