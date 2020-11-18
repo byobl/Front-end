@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import "./walletMain.css";
-import { Link } from 'react-router-dom';
 
 const style = {
     height: '1vh',
@@ -22,7 +22,7 @@ class WalletMain extends Component {
                         <td><Link to="/wallet/createWallet" style={{ textDecoration: 'none' }}><Button variant="outlined" style={style} id="button">새 지갑 만들기</Button></Link></td>
                     </tr>
                     <tr>
-                       <td><Link to="/certificate/MyCombination" style={{ textDecoration: 'none' }}><Button variant="outlined" style={style} id="button">지갑 가져오기</Button></Link></td>
+                       <td><Link to="/wallet/loadWallet" style={{ textDecoration: 'none' }}><Button variant="outlined" style={style} id="button">지갑 가져오기</Button></Link></td>
                     </tr>
                 </table>
             </div>
