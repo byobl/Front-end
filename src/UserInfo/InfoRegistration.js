@@ -43,9 +43,9 @@ class InfoRegistration extends Component {
             [name]: value
           });
       }
-    
+
       comparePwd(){
-      if( this.state.pwd1 != this.state.pwd2 ){
+      if( this.state.pwd1 !== this.state.pwd2 ){
               console.log("비밀번호 불일치");
               return false;
             } else{
@@ -57,7 +57,7 @@ class InfoRegistration extends Component {
     async onClickBtn(){ 
         var ret;
         const compare = this.comparePwd();
-        if(compare == true ){ // 비밀번호가 일치하면
+        if(compare === true ){ // 비밀번호가 일치하면
             await axios.post('http://35.232.159.201:3000/api/auth/register',
             {
                 "name": this.state.name,
