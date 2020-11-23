@@ -4,6 +4,9 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import "./login.css";
 import axios from 'axios';
+// import store from '../store';
+
+// const accessToken;
 
 class LogIn extends Component {
     constructor(props) {
@@ -15,6 +18,7 @@ class LogIn extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
     }
+
 
     handleChange(e) {
         const target = e.target;
@@ -41,6 +45,11 @@ class LogIn extends Component {
             ret = response.data;
             console.log(ret.message);
             console.log(ret);
+
+            var accessToken = ret.token;
+            console.log("토큰"+accessToken);
+            // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
+            axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
         })
         .catch(function (error) {
             ret = error.response;
@@ -55,6 +64,9 @@ class LogIn extends Component {
 
         this.setState({ message: ret.message});
       }
+
+
+
 
     render() {
         return (
