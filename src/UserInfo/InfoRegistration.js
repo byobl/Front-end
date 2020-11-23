@@ -113,7 +113,7 @@ class InfoRegistration extends Component {
                 </div>
                 <div className="buttons">
                  <Link to="/certificate/signup" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
-                <Link to="/userinfo/Join" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link>
+                <Link to="/userinfo/join" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link>
             </div>
             </div>
             );

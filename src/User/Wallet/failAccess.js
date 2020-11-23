@@ -15,7 +15,7 @@ class FailAccess extends Component {
                 </div>
                 <form className="centerBtn">
                     <tr>
-                        <td><Link to="/wallet/UploadWallet"><Button id= "subbtn2" type="submit" variant="contained" value="Confirmation" className="Confirmation">이전 화면으로</Button></Link></td>
+                        <td><Link to="/wallet/uploadWallet"><Button id= "subbtn2" type="submit" variant="contained" value="Confirmation" className="Confirmation">이전 화면으로</Button></Link></td>
                         <td><Link to="/wallet/FirstStep"><Button id= "subbtn3" type="submit" variant="contained" value="Confirmation" className="Confirmation">새 지갑 발급하기</Button></Link></td>                
                     </tr>      
                 </form>

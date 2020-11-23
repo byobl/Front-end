@@ -1,0 +1,65 @@
+.cerResult{
+    padding-bottom: 20vh;
+}
+.cer-header{
+    background-color: #9DB7FF;
+    color: white;
+    font-size: 2vw;
+}
+.cer-head{
+    background-color:#9DB7FF;
+    color: white;
+    text-align: center;
+}
+.cer-title{
+    display: block;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 4vw;
+    font-weight: bold;
+}
+.cer-content{
+    display: block;
+    padding-top: 5vh;
+    padding-left: 8vw;
+    margin-bottom: 20vh;
+    height: 70vh;
+    width: 90vw; 
+}
+.cer-txt{
+    font-size: 2vw;
+    padding-bottom: 5vh;
+}
+.cer-form{
+    display: inline-block;;
+    margin-bottom: 3vh;
+    width: 80vw;
+    height: 20vh;
+    border-width : 3px 3px 3px 3px;
+    border-style : solid;
+    border-color : #9DB7FF;
+}
+.cer-txt2{
+    color: gray;
+    text-align: center;
+    font-size: 1.5vw;
+    padding-bottom: 5vh; 
+}
+#cer-button{
+    background-color: #9DB7FF;
+    margin-left: 10px;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh; 
+}
+#cer-button2{
+    display: inline;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    margin-bottom: 3vh;
+    background-color:lightgrey;
+    color: black;
+    font-weight: bold;
+    width: 12vw;
+    height: 4vh;
+}

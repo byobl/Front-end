@@ -46,7 +46,7 @@ class LoadWallet extends Component {
                     </div>
                     <div className="stepButton">
                         <form>
-                            <Link to="/wallet/UploadWallet"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button></Link>          
+                            <Link to="/wallet/uploadWallet"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button></Link>          
                         </form>
                     </div>
                 </div>

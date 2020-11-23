@@ -7,8 +7,7 @@ import Button from '@material-ui/core/Button';
 class CareerRequest extends Component {
     render() {
         return (
-            <div>
-<div className="career">
+            <div className="career">
                 <div className="header">
                     <Link to="/" style={{ textDecoration: 'none' }}>
                         <p className="bold">Sillock</p></Link>
@@ -18,17 +17,29 @@ class CareerRequest extends Component {
                     </div>
                     <img src={stepimg} className="stepimg"/>
                 </div>
-                <div className="content">
+                <div className="car-content">
                     <div>
                         <p className="title2">증명요청</p>
-                        <p className="txt">선택하신 발행기관으로 내 이력 증명을 요청하시겠습니까?</p>
+                        <p className="txt2">선택하신 발행기관으로 내 이력 증명을 요청하시겠습니까?</p>
                     </div>
-                </div>
+                    <tr>
+                        <td>
+                        <p className="txt3">선택한 발행기관 목록</p>
+                        <div className="Cer-form2">
+                        </div>
+                        </td>
+                        <td>
+                        <p className="txt3">선택한 나의 이력 목록</p>
+                        <div className="Cer-form2">
+                        </div>
+                        </td>
+                    </tr>
                 </div>
                 <div className="buttons">
-                <Link to="/certificate/careerInstitution" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
-                <Link to="/certificate/announcement" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link></div>
+                <Link to="/certificate/careerChoice" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
+                <Link to="/certificate/announcement" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">요청하기 </Button></Link>
                 </div>
+            </div>
             );
         }
     }

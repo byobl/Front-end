@@ -9,8 +9,8 @@ import UserMain from "./UserMain";
 import InstitutionMain from "./InstitutionMain"
 import {LogIn,Join,SignUp,InfoRegistration,EmailAuth} from "./UserInfo/index"
 
-import {CertificateMain, CareerRegistration, MyCombination, CareerInstitution, CareerRequest, 
-  Announcement,MyChoice,MyPrintForm,MyIssueForm,MyTypeForm,CertificateResult} from "./User/Certificate/index"
+import {CertificateMain,CareerRegistration,CareerInstitution,CareerChoice,CareerRequest,MyCombination,
+  MyChoice,MyPrintForm,MyTypeForm,MyIssueForm,Announcement, Announcement2, CertificateResult, CertificateResult2} from "./User/Certificate/index"
 import {WalletMain, IdentityVerification, CreateWallet, LoadWallet, FirstStep, SecondStep, ThirdStep, UploadWallet, CompleteCreation, FailAccess, FailAccess2} from "./User/Wallet/index"
 import {IssureRegister} from "./Institute/Issuer/index"
 import {Dashboard} from "./Institute/Verifier/index"
@@ -20,20 +20,20 @@ ReactDOM.render(
   <Route path="/" component={UserMain} exact />
   <Route path="/home" component={Home} exact />
   <Route path="/institutionMain" component={InstitutionMain} exact />
-  <Route path="/userinfo/Join" component={Join} exact />
+  <Route path="/userinfo/join" component={Join} exact />
   <Route path="/userinfo/login" component={LogIn} exact />
   <Route path="/userinfo/signup" component={SignUp} exact />
   <Route path="/userinfo/infoRegistration" component={InfoRegistration} exact />
   <Route path="/userinfo/EmailAuth" component={EmailAuth} exact />
   <Route path="/wallet/walletMain" component={WalletMain} exact />
-  <Route path="/wallet/IdentityVerification" component={IdentityVerification} exact />
+  <Route path="/wallet/identityVerification" component={IdentityVerification} exact />
   <Route path="/wallet/createWallet" component={CreateWallet} exact />
   <Route path="/wallet/loadWallet" component={LoadWallet} exact />
   <Route path="/wallet/FirstStep" component={FirstStep} exact />
   <Route path="/wallet/SecondStep" component={SecondStep} exact />
   <Route path="/wallet/ThirdStep" component={ThirdStep} exact />
-  <Route path="/wallet/UploadWallet" component={UploadWallet} exact />
-  <Route path="/wallet/CompleteCreation" component={CompleteCreation} exact />
+  <Route path="/wallet/uploadWallet" component={UploadWallet} exact />
+  <Route path="/wallet/completeCreation" component={CompleteCreation} exact />
   <Route path="/wallet/failAccess" component={FailAccess} exact />
   <Route path="/wallet/failAccess2" component={FailAccess2} exact />
   <Route path="/certificateMain" component={CertificateMain} exact />
@@ -42,13 +42,16 @@ ReactDOM.render(
   <Route path="/certificate/careerRegistration" component={CareerRegistration} exact />
   <Route path="/certificate/myCombination" component={MyCombination} exact />
   <Route path="/certificate/careerInstitution" component={CareerInstitution} exact />
+  <Route path="/certificate/careerChoice" component={CareerChoice} exact />
   <Route path="/certificate/careerRequest" component={CareerRequest} exact />
   <Route path="/certificate/announcement" component={Announcement} exact />
+  <Route path="/certificate/announcement2" component={Announcement2} exact />
   <Route path="/certificate/myChoice" component={MyChoice} exact />
   <Route path="/certificate/myPrintForm" component={MyPrintForm} exact />
   <Route path="/certificate/myTypeForm" component={MyTypeForm} exact />
   <Route path="/certificate/myIssueForm" component={MyIssueForm} exact />
   <Route path="/certificate/certificateResult" component={CertificateResult} exact />
+  <Route path="/certificate/certificateResult2" component={CertificateResult2} exact />
   </BrowserRouter>,
   document.getElementById("root")
 );

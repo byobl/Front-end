@@ -1,0 +1,79 @@
+.MYcareer{
+    padding-bottom: 20vh;
+}
+.MYheader{
+    background-color: #9DB7FF;
+    color: white;
+    font-size: 2vw;
+}
+.MYhead{
+    background-color:#9DB7FF;
+    color: white;
+    text-align: center;
+}
+.MYtitle{
+    font-size: 4vw;
+    font-weight: bold;
+}
+.my-content{
+    display: block;
+    padding-top: 5vh;
+    padding-left: 8vw;
+    margin-bottom: 40vh;
+    height: 50vh;
+    width: 90vw;
+}
+.my-content2{
+    display: block;
+    padding-top: 5vh;
+    padding-left: 8vw;
+    margin-bottom: 20vh;
+    height: 50vh;
+    width: 90vw; 
+}
+.MYtitle2{
+    font-weight: bold;
+    padding-bottom: 2vh;
+    font-size: 2.7vw;
+}
+.MYtxt{
+    font-size: 1.5vw;
+    padding-bottom: 3vh;
+}
+.MYtxt2{
+    font-size: 2vw;
+    padding-bottom: 5vh;
+}
+.MYtxt3{
+    color: gray;
+    font-size: 2vw;
+    padding-bottom: 5vh; 
+}
+.my-form{
+    display: inline-block;;
+    margin-bottom: 3vh;
+    width: 80vw;
+    height: 20vh;
+    border-width : 3px 3px 3px 3px;
+    border-style : solid;
+    border-color : #9DB7FF;
+}
+.mybuttons{
+    display: block;
+    text-align: center;
+    margin-top: 10vh;
+}
+#MYbuttonss{
+    background-color: #9DB7FF;
+    margin-left: 10px;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh; 
+}
+#MYbuttonsss{
+    background-color:lightgrey;
+    color: black;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh; 
+}

@@ -21,10 +21,10 @@ class CertificateMain extends Component {
                 <p className="text">내 증명서 만들기</p>
                 <table id="table">
                     <tr>
-                        <td><Link to="/certificate/careerRegistration" style={{ textDecoration: 'none' }}>
+                        <td><Link to="/certificate/careerInstitution" style={{ textDecoration: 'none' }}>
                             <Button variant="outlined" style={style} id="button">내 이력 등록하기</Button>
                             </Link></td>
-                        <td><Link to="/certificate/MyCombination" style={{ textDecoration: 'none' }}>
+                        <td><Link to="/certificate/myChoice" style={{ textDecoration: 'none' }}>
                             <Button variant="outlined" style={style} id="button">나만의 증명서<br/>조합하기</Button>
                             </Link></td>
                     </tr>
