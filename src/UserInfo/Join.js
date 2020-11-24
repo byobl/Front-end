@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+import './signUp.css';
+import stepimg from "./가입step3.svg";
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Join extends Component {
     render() {
         return (
-            <div>
-                <h1>Join.js 화면 입니다.</h1>
-                <p>회원가입이 완료되었습니다.</p>
-                <div className="buttons">
-                 <Link to="/userinfo/infoRegistration" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
-                <Link to="/" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">홈으로 </Button></Link>
-            </div>
+            <div className="signup">
+                <div className="sign-header">
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+                        <p className="bold">Sillock</p></Link>
+                    <div className="sign-head">
+                        <p>sillock 계정 생성</p>
+                        <p className="sign-title">회원가입하기</p>
+                    </div>
+                    <img src={stepimg} className="sign-stepimg"/>
+                </div>
+                <div className="sign-content3">
+                    <div>
+                        <p className="sign-title2">회원가입이 완료되었습니다.</p>
+                        <p className="sign-txt2">로그인 하시면 실록 서비스를 정상적으로 이용하실 수 있습니다.</p>
+                    </div>
+                </div>
+                <div className="sign-Button">
+                        <Link to="/" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="sign-subbtn">홈으로 이동</Button></Link>
+                        <Link to="/userinfo/login" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="sign-subbtn2">로그인</Button></Link>
+                </div>
             </div>
             );
         }

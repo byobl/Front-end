@@ -1,12 +1,62 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import "./wallet.css";
-
+import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 class IdentityVerification extends Component {
     /*if 문 추가-> 인증 실패시 fail 컴포넌트 */
+    constructor(props) {
+        super(props);
+        this.state = {
+            message : "아직 응답이 없습니다",
+            userId: "",
+            password:"",
+            email: ""
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        const target = e.target;
+        console.log("target : "+target);
+        const value = target.value;
+        console.log("target.value : "+value);
+        const name = target.name;
+        console.log("target.name : "+name);
+
+        this.setState({
+            [name]: value
+          });
+      }
+
+      async onClickBtn(){ 
+        var ret;
+        await axios.post('http://35.232.159.201:3000/api/auth/verify',
+        {
+            "userId": this.state.userId,
+            "password": this.state.password,
+            "email": this.state.email
+        })
+            .then(function (response) {
+            ret = response.data;
+            console.log("ret.message : "+ret.msg);
+            console.log("ret : "+ret);
+            alert("이메일이 전송되었습니다. 링크를 확인해주세요");
+        })
+        .catch(function (error) {
+            ret = error.response;
+            ret = ret.data;
+            console.log(ret);
+            console.log("error ret : "+ret.msg);
+            alert("Error");
+            //에러 페이지 세분화
+        });
+    
+        this.setState({ message: ret.msg});
+        }
+
     render() {
         return (
             <div className="Wallet">
@@ -26,28 +76,47 @@ class IdentityVerification extends Component {
                                 <div className="layout">
                                     <TextField
                                     id="w-input"
-                                    label="Email"
-                                    type="Email"
+                                    label="ID"
+                                    name="userId"
+                                    type="text"
                                     variant="outlined"
+                                    onChange={this.handleChange}
+                                    placeholder="아이디"
+                                    required
                                     />
-                                    <Button id= "w-btn" variant="contained" className="EmailRequest">인증코드 받기</Button>
                                 </div>
                                 <div>
                                     <TextField
                                     id="w-input"
-                                    label="Code"
-                                    type="Code"
+                                    label="Password"
+                                    name="password"
+                                    type="password"
                                     variant="outlined"
+                                    onChange={this.handleChange}
+                                    placeholder="비밀번호"
+                                    required
                                     />
-                                    <Button id= "w-btn" variant="contained" className="CodeCheck">인증확인</Button>
+                                </div>
+                                <div className="layout">
+                                    <TextField
+                                    id="w-input"
+                                    label="Email"
+                                    name="email"
+                                    type="email"
+                                    variant="outlined"
+                                    onChange={this.handleChange}
+                                    placeholder="이메일"
+                                    required
+                                    />
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div className="stepButton">
                         <form>
-                        <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button></Link>               
+                        <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button></Link>               
                         </form>
+                        {/*-- 서버에서 온 값 : "{this.state.message}"*/}
                     </div>
                 </div>
             </div>

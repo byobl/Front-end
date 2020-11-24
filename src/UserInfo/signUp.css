@@ -1,42 +1,106 @@
 .signup{
     margin-bottom: 30vh;
 }
-.header{
+.sign-header{
     background-color: #9733ee;
     color: white;
     font-size: 2vw;
 }
-.bold{
-    font-weight: bold;
-    font-size: 3vw;
-    padding-top: 2vh;
-    padding-left: 2rem;
-    color: white;
-}
-.head{
+.sign-head{
     background-color: #9733ee;
     color: white;
     text-align: center;
 }
-.etitle{
+.sign-title{
     font-size: 4vw;
     font-weight: bold;
-    padding-bottom: 10vh;
 }
-.tt{
-    font-size: 20px;
-    padding-left: 20px;
-}
-
-.info{
+.sign-stepimg{
+    width:35vw;
+    padding-top: 7vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 7vh;
 }
-.button{
+.sign-content{
+    display: block;
+    padding-top: 7vh;
+    padding-left: 8vw;
+    margin-bottom: 10vh;
+    height: 80vh;
+    width: 90vw;
+}
+.sign-content2{
+    display: block;
+    padding-top: 7vh;
+    padding-left: 32vw;
+    margin-bottom: 10vh;
+    height: 70vh;
+    width: 90vw;
+}
+.sign-content3{
+    display: block;
+    padding-top: 7vh;
+    padding-left: 8vw;
+    margin-bottom: 10vh;
+    height: 40vh;
+    width: 90vw;
+}
+.sign-title{
+    font-size: 4vw;
+    font-weight: bold;
+}
+.sign-title2{
+    font-weight: bold;
+    padding-top: 10vh;
+    padding-bottom: 2vh;
+    font-size: 2.5vw;
     text-align: center;
-    color: blue;
-    font-size: 25px;
-    margin-bottom: 50px;
-    padding: 0 0 0 0;
+}
+.sign-txt{
+    font-size: 2vw;
+    padding-bottom: 1vh;
+    font-weight: bold;
+}
+.sign-txt2{
+    font-size: 2vw;
+    padding-bottom: 7vh;
+    text-align: center;
+}
+.sign-btn{
+   display: inline;
+}
+.sign-Button{
+    display: block;
+    text-align: center;
+    margin-top: 10vh;
+}
+#sign-subbtn{
+    background-color: rgb(222, 222, 222);
+    color: black;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh; 
+}
+#sign-subbtn2{
+    color: black;
+    background-color: rgb(200, 150, 255);
+    margin-left: 10px;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh; 
+}
+.i-layout{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 3vw;
+}
+.i-layout2{
+    padding-bottom: 5vh;
+    font-size: 3vw;
+}
+#i-input{
+    height: 3vh;
+    width: 35vw;
 }

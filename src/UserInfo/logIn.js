@@ -56,13 +56,14 @@ class LogIn extends Component {
             console.log(ret);
             ret = ret.data;
             console.log(ret);
-            alert("Error");
+            alert("올바른 로그인 정보를 입력해주세요.");
             //에러 페이지 세분화
             //회원가입 x.
             //올바른 로그인 정보를 입력해주세요.
         });
 
         this.setState({ message: ret.message});
+        if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
       }
 
 
@@ -106,9 +107,9 @@ class LogIn extends Component {
                             <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>로그인</Button>
                         </div>
                         <div>
-                            <Link to="/userinfo/signup"><Button>회원가입</Button></Link>
-                            <Link to="/userinfo/signup"><Button id="btn-style">실록계정</Button></Link>
-                            <Link to="/userinfo/signup"><Button>비밀번호 찾기</Button></Link>
+                            <Link to="/userinfo/signupTerms"><Button>회원가입</Button></Link>
+                            <Link to="/userinfo/signupTerms"><Button id="btn-style">실록계정</Button></Link>
+                            <Link to="/userinfo/signupTerms"><Button>비밀번호 찾기</Button></Link>
                         </div>
                         <div> -- 서버에서 온 값 : "{this.state.message}" </div>
                     </form>

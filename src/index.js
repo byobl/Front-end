@@ -7,7 +7,7 @@ import { BrowserRouter,Route } from 'react-router-dom';
 import Home from "./home";
 import UserMain from "./UserMain";
 import InstitutionMain from "./InstitutionMain"
-import {LogIn,Join,SignUp,InfoRegistration,EmailAuth} from "./UserInfo/index"
+import {LogIn,Join,SignUp,SignupTerms,InfoRegistration,EmailAuth} from "./UserInfo/index"
 
 import {CertificateMain,CareerRegistration,CareerInstitution,CareerChoice,CareerRequest,MyCombination,
   MyChoice,MyPrintForm,MyTypeForm,MyIssueForm,Announcement, Announcement2, CertificateResult, CertificateResult2} from "./User/Certificate/index"
@@ -23,10 +23,11 @@ ReactDOM.render(
   <Route path="/userinfo/join" component={Join} exact />
   <Route path="/userinfo/login" component={LogIn} exact />
   <Route path="/userinfo/signup" component={SignUp} exact />
+  <Route path="/userinfo/signupTerms" component={SignupTerms} exact />
   <Route path="/userinfo/infoRegistration" component={InfoRegistration} exact />
   <Route path="/userinfo/EmailAuth" component={EmailAuth} exact />
   <Route path="/wallet/walletMain" component={WalletMain} exact />
-  <Route path="/wallet/identityVerification" component={IdentityVerification} exact />
+  <Route path="/wallet/IdentityVerification" component={IdentityVerification} exact />
   <Route path="/wallet/createWallet" component={CreateWallet} exact />
   <Route path="/wallet/loadWallet" component={LoadWallet} exact />
   <Route path="/wallet/FirstStep" component={FirstStep} exact />

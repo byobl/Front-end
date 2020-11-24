@@ -69,15 +69,14 @@
 #w-btn{
     margin-left: 1vh;
     margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
+    margin-bottom: 2.5vh;
     padding-left: 0.5vh;
     padding-right: 0.5vh;
-    background-color: blueviolet;
-    color: white;
+    background-color:  rgb(200, 150, 255);
+    color: black;
     width: 5vw;
     height: 5vh; 
     font-weight: bold;
-
 }
 #bigbtn{
     margin-left: 1vh;
@@ -115,14 +114,14 @@
     color: black;
     background-color: blueviolet;
     display: block;
-    margin-left: 30vh;
+    margin-left: 35vh;
     width: 7vw;
     height: 5vh; 
     font-weight: bold;
 }
 #subbtn2{
     color: black;
-    background-color: rgb(158, 157, 160);
+    background-color: rgb(222, 222, 222);
     display: inline-block;
     margin-left: 10vh;
     width: 10vw;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./signUp.css";
 import { Link } from 'react-router-dom';
 
+{/*임시 회원가입 - 동의 페이지*/}
 class SignUp extends Component {
     
     render() {

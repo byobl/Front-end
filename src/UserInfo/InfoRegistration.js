@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import "./signUp.css"
+import stepimg from "./가입step2.svg";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 // // 비밀번호 두번 입력 동일한지 확인하는 함수
 // function comparePwd(){
@@ -78,6 +80,7 @@ class InfoRegistration extends Component {
             });
     
             this.setState({ message: ret.message});
+            if(this.state.message ==="Registered"){this.props.history.push("/userinfo/join");}
         }
         else{ //아니면
             alert("입력된 두 비밀번호가 다릅니다. 다시 확인해주세요");
@@ -88,33 +91,80 @@ class InfoRegistration extends Component {
 
     render() {
         return (
-            <div>
-                <h1>회원가입하기(InfoRegistration) 입니다.</h1><br/><br/>
-                <form >
-                    <label># 이름 <input type="text" name="name" 
-                        onChange={this.handleChange} placeholder="이름" required></input></label><br/><br/>
-                                    {/* <Button variant="contained" color="primary">중복확인</Button> */}
-                    <label>#  비밀번호 <input type="password" name="pwd1" placeholder="비밀번호"
-                        onChange={this.handleChange} required></input></label><br/><br/>
-                    <label>#   비밀번호 확인 <input type="password" name="pwd2" 
-                        placeholder="비밀번호" onChange={this.handleChange} required></input></label><br/><br/>
-                    <label>#   이메일 <input type="text" name="email" onChange={this.handleChange} 
-                        placeholder="Email"  required></input><select name="items1">
-                                                                    <option value="naver.com">@naver.com</option>
-                                                                    <option value="google.com">@google.com</option>
-                                                                    <option value="daum.com">@daum.com</option>
-                                                                </select></label>
-                    {/* <input type="submit" value="회원가입하기" className="info"></input>  */}
-                </form><br/><br/>
-                <div> 
-               
-                <button className='button' onClick={(e) => { this.onClickBtn() }}> 회원가입 정보 보내기 버튼</button> <br/>
-                -- 서버에서 온 값 : "{this.state.message}" 
+            <div className="signup">
+                <div className="sign-header">
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+                        <p className="bold">Sillock</p></Link>
+                    <div className="sign-head">
+                        <p>sillock 계정 생성</p>
+                        <p className="sign-title">회원가입하기</p>
+                    </div>
+                    <img src={stepimg} className="sign-stepimg"/>
+                </div>
+                <div className="sign-content2">
+                    <div>
+                        <p className="sign-txt">사용자 정보</p>
+                    </div>
+                    <form >
+                        <div className="i-layout">
+                            <TextField
+                            id="i-input"
+                            label="Name"
+                            name="name"
+                            type="text"
+                            variant="outlined"
+                            onChange={this.handleChange}
+                            placeholder="이름"
+                            required
+                            />
+                        </div>
+                        <div className="i-layout2">
+                            <TextField
+                            id="i-input"
+                            label="Password"
+                            name="pwd1"
+                            type="password"
+                            variant="outlined"
+                            onChange={this.handleChange}
+                            placeholder="비밀번호"
+                            required
+                            />
+                        </div>
+                        <div className="i-layout2">
+                            <TextField
+                            id="i-input"
+                            label="Password Checks"
+                            name="pwd2"
+                            type="password"
+                            variant="outlined"
+                            onChange={this.handleChange}
+                            placeholder="비밀번호 확인"
+                            required
+                            />
+                        </div>
+                        <div className="i-layout2">
+                            <TextField
+                            id="i-input"
+                            label="Email"
+                            name="email"
+                            type="email"
+                            variant="outlined"
+                            onChange={this.handleChange}
+                            placeholder="이메일"
+                            required
+                            />
+                        </div>
+                    </form>
+                    {/*
+                    <div>
+                    <button id='sign-subbtn' onClick={(e) => { this.onClickBtn() }}> 회원가입 정보 보내기 버튼</button> <br/>
+                    -- 서버에서 온 값 : "{this.state.message}" 
+                    </div>*/}
                 </div>
                 <div className="buttons">
-                 <Link to="/certificate/signup" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonsss">이전으로 </Button></Link>
-                <Link to="/userinfo/join" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="buttonss">선택하기 </Button></Link>
-            </div>
+                        <Link to="/userinfo/signupTerms" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="sign-subbtn">이전</Button></Link>
+                        <Button variant="contained" color="primary" id="sign-subbtn2" onClick={(e) => { this.onClickBtn() }}>확인</Button>
+                </div>
             </div>
             );
         }
