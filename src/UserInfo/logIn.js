@@ -78,9 +78,7 @@ class LogIn extends Component {
         })
           .then(function (response) {
             ret = response;
-            console.log(ret.statusText);
-            // console.log("토큰담겼나?"+localStorage.getItem('jwt'));
-            // axios.defaults.headers.common['x-access-token'] = `Bearer ${localStorage.getItem('jwt')}`;
+            console.log("전송결과 : "+ret.statusText);
         })
         .catch(function (error) {
             ret = error.response;

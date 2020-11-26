@@ -6,7 +6,22 @@ import Button from '@material-ui/core/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BGimage from './img/보라배경.svg'
 
-import * as ReactBootstrap from 'react-bootstrap';
+import {
+  Collapse, 
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+  Row,
+  Col,
+  Jumbotron,
+  // Button
+} from 'react-bootstrap';
+
+// import * as ReactBootstrap from 'react-bootstrap';
 
 const all = {
   padding: "0",
@@ -62,52 +77,69 @@ const buttonStyle2 = {
   boxShadow: '0 3px 5px 2px rgba(204, 204, 255, .3)',
 }
 
+// function LogIn(props) {
+//   return  <ReactBootstrap.Button  href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>;
+// }
+
+// function LogOut(props) {
+// return <h3>안녕하세요 고객님</h3>;
+// }
+
+// function Greeting(props) {
+//   const isLoggedIn = props.isLoggedIn;
+//   if (isLoggedIn) {
+//     return <UserGreeting />;
+//   }
+//   return <GuestGreeting />;
+// }
+
+
 function UserMain() {
   return (
     <>
-      <ReactBootstrap.Container fluid style={all}>
-        <ReactBootstrap.Navbar collapseOnSelect expand="lg" bg="light" className="fixed-top">
-          <ReactBootstrap.Navbar.Brand href="#home" style={banner}>
+      <Container fluid style={all}>
+        <Navbar collapseOnSelect expand="lg" bg="light" className="fixed-top">
+          <Navbar.Brand href="#home" style={banner}>
             Sillock <i className="fas fa-cubes"></i>
-          </ReactBootstrap.Navbar.Brand>
+          </Navbar.Brand>
 
-          <ReactBootstrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <ReactBootstrap.Navbar.Collapse id="basic-navbar-nav">
-            <ReactBootstrap.Nav className="mr-auto"></ReactBootstrap.Nav>
-            <ReactBootstrap.Nav>
-              <ReactBootstrap.Nav.Link href="#" style={navContent}>실록소개</ReactBootstrap.Nav.Link>
-              <ReactBootstrap.Nav.Link href="#" style={navContent}>실록안내</ReactBootstrap.Nav.Link>
-              <ReactBootstrap.Nav.Link href="/institutionMain" style={navContent}>기업/기관</ReactBootstrap.Nav.Link>
-              <ReactBootstrap.Nav.Link href="#" style={navContent}>자주 묻는 질문</ReactBootstrap.Nav.Link>
-              <ReactBootstrap.Button  href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>
-            </ReactBootstrap.Nav>
-          </ReactBootstrap.Navbar.Collapse>
-        </ReactBootstrap.Navbar>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto"></Nav>
+            <Nav>
+              <Nav.Link href="#" style={navContent}>실록소개</Nav.Link>
+              <Nav.Link href="#" style={navContent}>실록안내</Nav.Link>
+              <Nav.Link href="/institutionMain" style={navContent}>기업/기관</Nav.Link>
+              <Nav.Link href="#" style={navContent}>자주 묻는 질문</Nav.Link>
+              <Button  href="/userinfo/login" style={navContent} variant="light">로그인</Button>
+             
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
 
         <div style={style}>
-          <ReactBootstrap.Container className="h-100">
-            <ReactBootstrap.Row className="align-items-center h-100">
-              <ReactBootstrap.Col xs={12} md={4}>
+          <Container className="h-100">
+            <Row className="align-items-center h-100">
+              <Col xs={12} md={4}>
                 <p className="info2">Sillock</p>
                 <p >사실을 있는 그대로 적은 기록</p>
                 <p>그리고 블록체인</p>
-              </ReactBootstrap.Col>
-              <ReactBootstrap.Col xs={12} md={8} className="w-100 text-center">
-                <ReactBootstrap.Row>
-                  <ReactBootstrap.Col xs={12} md={6} className="box">
+              </Col>
+              <Col xs={12} md={8} className="w-100 text-center">
+                <Row>
+                  <Col xs={12} md={6} className="box">
                     <Button  href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
-                  </ReactBootstrap.Col>
-                  <ReactBootstrap.Col xs={12} md={6} className="box">
+                  </Col>
+                  <Col xs={12} md={6} className="box">
                     <Button  href="/certificateMain" style={buttonStyle2}>내 증명서 만들기</Button>
-                  </ReactBootstrap.Col>
-                </ReactBootstrap.Row>
-              </ReactBootstrap.Col>
-            </ReactBootstrap.Row>
-          </ReactBootstrap.Container>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Container>
         </div>
-      </ReactBootstrap.Container>
+      </Container>
     </>
   );
 }
 export default UserMain;
-
