@@ -5,28 +5,27 @@ import Button from '@material-ui/core/Button';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BGimage from './img/보라배경.svg'
-
+import './Main-2.css';
 import {
-  Collapse, 
+  // Collapse, 
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
+  // NavbarToggler,
+  // NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
+  // NavItem,
+  // NavLink,
   Container,
   Row,
   Col,
-  Jumbotron,
+  // Jumbotron,
   // Button
 } from 'react-bootstrap';
 
-// import * as ReactBootstrap from 'react-bootstrap';
+import * as ReactBootstrap from 'react-bootstrap';
 
 const all = {
   padding: "0",
   margin: "0",
-
   paddingTop: "70px"
 }
 
