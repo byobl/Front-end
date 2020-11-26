@@ -79,7 +79,7 @@ function UserMain() {
               <ReactBootstrap.Nav.Link href="#" style={navContent}>실록안내</ReactBootstrap.Nav.Link>
               <ReactBootstrap.Nav.Link href="/institutionMain" style={navContent}>기업/기관</ReactBootstrap.Nav.Link>
               <ReactBootstrap.Nav.Link href="#" style={navContent}>자주 묻는 질문</ReactBootstrap.Nav.Link>
-              <ReactBootstrap.Button variant="light">로그인</ReactBootstrap.Button>
+              <ReactBootstrap.Button  href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>
             </ReactBootstrap.Nav>
           </ReactBootstrap.Navbar.Collapse>
         </ReactBootstrap.Navbar>
@@ -95,10 +95,10 @@ function UserMain() {
               <ReactBootstrap.Col xs={12} md={8} className="w-100 text-center">
                 <ReactBootstrap.Row>
                   <ReactBootstrap.Col xs={12} md={6} className="box">
-                    <Button style={buttonStyle1} className="mb-4">지갑생성하기</Button>
+                    <Button  href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
                   </ReactBootstrap.Col>
                   <ReactBootstrap.Col xs={12} md={6} className="box">
-                    <Button style={buttonStyle2}>내 증명서 만들기</Button>
+                    <Button  href="/certificateMain" style={buttonStyle2}>내 증명서 만들기</Button>
                   </ReactBootstrap.Col>
                 </ReactBootstrap.Row>
               </ReactBootstrap.Col>
