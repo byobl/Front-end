@@ -47,9 +47,12 @@ class LogIn extends Component {
             console.log(ret);
 
             var accessToken = ret.token;
-            console.log("토큰"+accessToken);
+            localStorage.setItem('jwt', accessToken);
+            console.log("토큰"+localStorage.getItem('jwt'));
             // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
+            
             axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+            
         })
         .catch(function (error) {
             ret = error.response;
@@ -61,13 +64,38 @@ class LogIn extends Component {
             //회원가입 x.
             //올바른 로그인 정보를 입력해주세요.
         });
-
         this.setState({ message: ret.message});
-        if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
+        // if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
       }
 
 
+      async onClickBtn2(){ 
+        var ret;
+        await axios.get('http://35.232.159.201:3000/api/auth/check',{
+            headers: {
+              'x-access-token': localStorage.getItem('jwt')
+            }
+        })
+          .then(function (response) {
+            ret = response;
+            console.log(ret.statusText);
+            // console.log("토큰담겼나?"+localStorage.getItem('jwt'));
+            // axios.defaults.headers.common['x-access-token'] = `Bearer ${localStorage.getItem('jwt')}`;
+        })
+        .catch(function (error) {
+            ret = error.response;
+            console.log(ret);
+            ret = ret.data;
+            console.log(ret);
+            alert("에러발생. 다시 시도해주십시오.");
+            //에러 페이지 세분화
+            //회원가입 x.
+            //올바른 로그인 정보를 입력해주세요.
+        });
 
+        this.setState({ message: ret.message});
+        // if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
+      }
 
     render() {
         return (
@@ -105,6 +133,7 @@ class LogIn extends Component {
                         </div>
                         <div>
                             <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>로그인</Button>
+                            <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn2() }}>확인용버튼</Button>
                         </div>
                         <div>
                             <Link to="/userinfo/signupTerms"><Button>회원가입</Button></Link>

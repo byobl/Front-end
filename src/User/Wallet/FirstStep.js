@@ -23,7 +23,7 @@ class FirstStep extends Component {
                     <div className="contents">
                         <div className="conlayout">
                             <form>
-                                <div className="layout2">
+                                {/* <div className="layout2">
                                     <p className="w-txt3">지갑 이름</p>
                                     <TextField
                                     id="w-input"
@@ -31,7 +31,7 @@ class FirstStep extends Component {
                                     type="walletName"
                                     variant="outlined"
                                     />
-                                </div>
+                                </div> */}
                                 <div className="layout2">
                                     <p className="w-txt3">지갑 비밀번호</p>
                                     <TextField
