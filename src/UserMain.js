@@ -2,7 +2,7 @@ import Button from '@material-ui/core/Button';
 //import Navbar from "./Components/Navbar/Navbar";
 //import { Link } from 'react-router-dom';
 // import './Main.css';
-
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BGimage from './img/보라배경.svg'
 import './Main-2.css';
@@ -76,24 +76,61 @@ const buttonStyle2 = {
   boxShadow: '0 3px 5px 2px rgba(204, 204, 255, .3)',
 }
 
-// function LogIn(props) {
-//   return  <ReactBootstrap.Button  href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>;
-// }
 
-// function LogOut(props) {
-// return <h3>안녕하세요 고객님</h3>;
-// }
 
-// function Greeting(props) {
-//   const isLoggedIn = props.isLoggedIn;
-//   if (isLoggedIn) {
-//     return <UserGreeting />;
-//   }
-//   return <GuestGreeting />;
-// }
+
+
+function UserLogIn() {//로그아웃된 상태일때  
+  return  <ReactBootstrap.Button  href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>;
+}
+
+function UserLogOut() { //로그인된 상태일때 --> 로그아웃하는(토큰 삭제하는 기능 추가하기)
+return  <ReactBootstrap.Button onClick={UserLogOut2()} style={navContent} variant="light" >로그아웃</ReactBootstrap.Button>;
+}
+
+
+function UserLogOut2() { //로그인된 상태일때 --> 로그아웃하는(토큰 삭제하는 기능 추가하기)
+  console.log("ddd")
+  // localStorage.removeItem('jwt');
+  }
+
+function UserLogInOut() { //check api에 몰어봐서 200이면 로그인된 상태-> 다른 링크 접근가능
+  var isLoggedIn; // check한 토큰 유효하면 로그인유지
+  var ret;
+  var status;
+        axios.get('http://35.232.159.201:3000/api/auth/check',{
+            headers: {
+              'x-access-token': localStorage.getItem('jwt')
+            }
+        })
+          .then(function (response) {
+            ret = response;
+            status = ret.status;
+            console.log("전송결과 : "+ret.statusText);
+            console.log(status);
+        })
+        .catch(function (error) {
+            ret = error.response;
+            console.log(ret);
+            status = ret.status;
+            // alert("다시 로그인해주십시오.");
+        });
+        //현재 axios밖의 status에는 할당이 안됨.
+  console.log("console.log(status): "+status);
+  if(status !== 200) isLoggedIn = false; //토큰이없으면
+  else isLoggedIn = true;
+  console.log(isLoggedIn);
+
+  if (isLoggedIn) {    
+    console.log("현재 가진 토큰"+localStorage.getItem('jwt'));
+    return <UserLogOut />; 
+  }
+  return <UserLogIn />;
+}
 
 
 function UserMain() {
+  
   return (
     <>
       <Container fluid style={all}>
@@ -110,8 +147,8 @@ function UserMain() {
               <Nav.Link href="#" style={navContent}>실록안내</Nav.Link>
               <Nav.Link href="/institutionMain" style={navContent}>기업/기관</Nav.Link>
               <Nav.Link href="#" style={navContent}>자주 묻는 질문</Nav.Link>
-              <Button  href="/userinfo/login" style={navContent} variant="light">로그인</Button>
-             
+              {/* <Button  href="/userinfo/login" style={navContent} variant="light">로그인</Button> */}
+             {UserLogInOut()}
             </Nav>
           </Navbar.Collapse>
         </Navbar>

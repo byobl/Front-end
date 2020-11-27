@@ -65,7 +65,7 @@ class LogIn extends Component {
             //올바른 로그인 정보를 입력해주세요.
         });
         this.setState({ message: ret.message});
-        // if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
+        if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
       }
 
 
@@ -102,7 +102,7 @@ class LogIn extends Component {
                     <div className="Logindex">
                     <h1>나만의 증명서,</h1>
                     <h1>내 손 안의 증명서</h1>
-                    <p>Sillock 계정으로 간편하고 편리하게 관리해보세요!</p>
+                    <p>Sillock 계정으로 간편하고<br/> 편리하게 관리해보세요!</p>
                     </div>
                 </div>
                 <div className="box2">
@@ -133,9 +133,9 @@ class LogIn extends Component {
                             <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>로그인</Button>
                             <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn2() }}>확인용버튼</Button>
                         </div>
-                        <div>
+                        <div id="links">
                             <Link to="/userinfo/signupTerms"><Button>회원가입</Button></Link>
-                            <Link to="/userinfo/signupTerms"><Button id="btn-style">실록계정</Button></Link>
+                            <Link to="/userinfo/signupTerms"><Button >실록계정</Button></Link>
                             <Link to="/userinfo/signupTerms"><Button>비밀번호 찾기</Button></Link>
                         </div>
                         <div> -- 서버에서 온 값 : "{this.state.message}" </div>
