@@ -84,14 +84,15 @@ function UserLogIn() {//로그아웃된 상태일때
   return  <ReactBootstrap.Button  href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>;
 }
 
-function UserLogOut() { //로그인된 상태일때 --> 로그아웃하는(토큰 삭제하는 기능 추가하기)
-return  <ReactBootstrap.Button onClick={function() {UserLogOut2()}} style={navContent} variant="light" >로그아웃</ReactBootstrap.Button>;
+function UserLogOut() { //로그인된 상태일때 
+return  <ReactBootstrap.Button onClick={function() {UserLogOut2();}} style={navContent} variant="light" ><span id="logout">로그아웃</span></ReactBootstrap.Button>;
 }
 
 
-function UserLogOut2() { //로그인된 상태일때 --> 로그아웃하는(토큰 삭제하는 기능 추가하기)
+function UserLogOut2() {
   console.log("토큰삭제")
   localStorage.removeItem('jwt');
+  window.location.reload();
   // this.props.history.push("/");
 }
 
@@ -109,30 +110,31 @@ function UserLogOut2() { //로그인된 상태일때 --> 로그아웃하는(토�
               console.log("전송결과 : "+ret.statusText);
               console.log(status);
               localStorage.setItem('status', status);
-              
           })
           .catch(function (error) {
               ret = error.response;
               console.log(ret);
               status = ret.status;
               localStorage.setItem('status', status);
-              // alert("다시 로그인해주십시오.");
           });
-  }
+}
 
 
 function UserLogInOut() { //check api에 몰어봐서 200이면 로그인된 상태-> 다른 링크 접근가능
   var isLoggedIn; // check한 토큰 유효하면 로그인유지
   var status;
-  Getjwt();
+  
   status = localStorage.getItem('status');
         //현재 axios밖의 status에는 할당이 안됨.
   console.log("status: "+status);
 
-  if(status !== "200") isLoggedIn = false; //토큰이없으면
+  if(status !== "200") isLoggedIn = false; //토큰이 없으면
   else isLoggedIn = true;
-  console.log(isLoggedIn);
+  return isLoggedIn;
+}
 
+function load(){
+  var isLoggedIn = UserLogInOut();
   if (isLoggedIn) return <UserLogOut />; 
   return <UserLogIn />;
 }
@@ -157,7 +159,10 @@ function UserMain() {
               <Nav.Link href="/institutionMain" style={navContent}>기업/기관</Nav.Link>
               <Nav.Link href="#" style={navContent}>자주 묻는 질문</Nav.Link>
               {/* <Button  href="/userinfo/login" style={navContent} variant="light">로그인</Button> */}
-             {UserLogInOut()}
+              {/* {location.reload()} */}
+              {Getjwt()}
+              {load()}
+             
             </Nav>
           </Navbar.Collapse>
         </Navbar>

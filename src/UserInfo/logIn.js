@@ -22,11 +22,11 @@ class LogIn extends Component {
 
     handleChange(e) {
         const target = e.target;
-        console.log("target : "+target);
+        // console.log("target : "+target);
         const value = target.value;
-        console.log("target.value : "+value);
+        // console.log("target.value : "+value);
         const name = target.name;
-        console.log("target.name : "+name);
+        // console.log("target.name : "+name);
 
         this.setState({
             [name]: value
@@ -48,10 +48,7 @@ class LogIn extends Component {
 
             var accessToken = ret.token;
             localStorage.setItem('jwt', accessToken);
-            console.log("토큰"+localStorage.getItem('jwt'));
-            // API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
-            
-            axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+            // console.log("토큰"+localStorage.getItem('jwt'));
             
         })
         .catch(function (error) {
@@ -64,36 +61,68 @@ class LogIn extends Component {
             //회원가입 x.
             //올바른 로그인 정보를 입력해주세요.
         });
-        this.setState({ message: ret.message});
-        if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
+        this.Getjwt();
+        // this.setState({ message: ret.message});
+        
       }
 
-
-      async onClickBtn2(){ 
+      Getjwt(){
         var ret;
-        await axios.get('http://35.232.159.201:3000/api/auth/check',{
-            headers: {
-              'x-access-token': localStorage.getItem('jwt')
-            }
-        })
-          .then(function (response) {
-            ret = response;
-            console.log("전송결과 : "+ret.statusText);
-        })
-        .catch(function (error) {
-            ret = error.response;
-            console.log(ret);
-            ret = ret.data;
-            console.log(ret);
-            alert("에러발생. 다시 시도해주십시오.");
-            //에러 페이지 세분화
-            //회원가입 x.
-            //올바른 로그인 정보를 입력해주세요.
-        });
+        var status;
+        axios.get('http://35.232.159.201:3000/api/auth/check',{
+                  headers: {
+                    'x-access-token': localStorage.getItem('jwt')
+                  }
+              })
+                .then(function (response) {
+                  ret = response;
+                  status = ret.status;
+                  console.log("전송결과 : "+ret.statusText);
+                  console.log(status);
+                  localStorage.setItem('status', status);
+                 
+              })
+              .catch(function (error) {
+                  ret = error.response;
+                  console.log(ret);
+                  status = ret.status;
+                  localStorage.setItem('status', status);
+              })
+              .then(function (response) {
+                if(localStorage.getItem('status') === '200'){
+                    console.log("로그인 성공"); 
+                    window.location.replace("/");
+                    // this.props.history.push("/");
+                } 
+            });
+              
+    }
 
-        this.setState({ message: ret.message});
-        // if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
-      }
+    //   async onClickBtn2(){ 
+    //     var ret;
+    //     await axios.get('http://35.232.159.201:3000/api/auth/check',{
+    //         headers: {
+    //           'x-access-token': localStorage.getItem('jwt')
+    //         }
+    //     })
+    //       .then(function (response) {
+    //         ret = response;
+    //         console.log("전송결과 : "+ret.statusText);
+    //     })
+    //     .catch(function (error) {
+    //         ret = error.response;
+    //         console.log(ret);
+    //         ret = ret.data;
+    //         console.log(ret);
+    //         alert("에러발생. 다시 시도해주십시오.");
+    //         //에러 페이지 세분화
+    //         //회원가입 x.
+    //         //올바른 로그인 정보를 입력해주세요.
+    //     });
+
+    //     this.setState({ message: ret.message});
+    //     // if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
+    //   }
 
     render() {
         return (
@@ -131,14 +160,13 @@ class LogIn extends Component {
                         </div>
                         <div>
                             <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn() }}>로그인</Button>
-                            <Button id="checkbtn" variant="contained" className="UserCheck" onClick={(e) => { this.onClickBtn2() }}>확인용버튼</Button>
                         </div>
                         <div id="links">
                             <Link to="/userinfo/signupTerms"><Button>회원가입</Button></Link>
                             <Link to="/userinfo/signupTerms"><Button >실록계정</Button></Link>
                             <Link to="/userinfo/signupTerms"><Button>비밀번호 찾기</Button></Link>
                         </div>
-                        <div> -- 서버에서 온 값 : "{this.state.message}" </div>
+                        {/* <div> -- 서버에서 온 값 : "{this.state.message}" </div> */}
                     </form>
                 </div>
             </div>
