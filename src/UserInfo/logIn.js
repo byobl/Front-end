@@ -98,32 +98,6 @@ class LogIn extends Component {
               
     }
 
-    //   async onClickBtn2(){ 
-    //     var ret;
-    //     await axios.get('http://35.232.159.201:3000/api/auth/check',{
-    //         headers: {
-    //           'x-access-token': localStorage.getItem('jwt')
-    //         }
-    //     })
-    //       .then(function (response) {
-    //         ret = response;
-    //         console.log("전송결과 : "+ret.statusText);
-    //     })
-    //     .catch(function (error) {
-    //         ret = error.response;
-    //         console.log(ret);
-    //         ret = ret.data;
-    //         console.log(ret);
-    //         alert("에러발생. 다시 시도해주십시오.");
-    //         //에러 페이지 세분화
-    //         //회원가입 x.
-    //         //올바른 로그인 정보를 입력해주세요.
-    //     });
-
-    //     this.setState({ message: ret.message});
-    //     // if(this.state.message == null){alert("로그인 성공"); this.props.history.push("/");}
-    //   }
-
     render() {
         return (
             <div className="LogIn">
