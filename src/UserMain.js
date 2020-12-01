@@ -94,10 +94,11 @@ function UserLogOut2() {
   localStorage.removeItem('jwt');
   console.log("토큰삭제 완료");
   Getjwt();
-  setTimeout(function() {
+  //localStorage에 기록되는데 시작이 좀 걸리는 듯해서 0.5초 뒤 새로고침 한번 함.
+  setTimeout(function() { 
     console.log("토큰삭제 완료");
     window.location.href = window.location.href;
-}, 300);
+}, 500);
   
   // this.props.history.push("/");
 }
@@ -147,6 +148,10 @@ function load(){
   return <UserLogIn />;
 }
 
+function loginMessage(){
+  alert('로그인이 필요합니다');
+}
+
 
 function UserMain() {
   
@@ -186,10 +191,12 @@ function UserMain() {
               <Col xs={12} md={8} className="w-100 text-center">
                 <Row>
                   <Col xs={12} md={6} className="box">
-                    <Button  href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
+                    {UserLogInOut()? <Button  href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
+                  :  <Button  onClick={function() {loginMessage()}} style={buttonStyle1}>지갑생성하기</Button>}
                   </Col>
                   <Col xs={12} md={6} className="box">
-                    <Button  href="/certificateMain" style={buttonStyle2}>내 증명서 만들기</Button>
+                  {UserLogInOut()?  <Button  href="/certificateMain" style={buttonStyle2}>내 증명서 만들기</Button>
+                  :  <Button  onClick={function() {loginMessage()}} style={buttonStyle2}>내 증명서 만들기</Button>}
                   </Col>
                 </Row>
               </Col>
