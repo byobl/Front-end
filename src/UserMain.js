@@ -154,7 +154,6 @@ function loginMessage(){
 
 
 function UserMain() {
-  
   return (
     <>
       <Container fluid style={all}>
@@ -194,6 +193,7 @@ function UserMain() {
                     {UserLogInOut()? <Button  href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
                   :  <Button  onClick={function() {loginMessage()}} style={buttonStyle1}>지갑생성하기</Button>}
                   </Col>
+
                   <Col xs={12} md={6} className="box">
                   {UserLogInOut()?  <Button  href="/certificateMain" style={buttonStyle2}>내 증명서 만들기</Button>
                   :  <Button  onClick={function() {loginMessage()}} style={buttonStyle2}>내 증명서 만들기</Button>}

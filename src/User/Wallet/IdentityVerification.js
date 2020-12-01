@@ -20,11 +20,11 @@ class IdentityVerification extends Component {
 
     handleChange(e) {
         const target = e.target;
-        console.log("target : "+target);
+        // console.log("target : "+target);
         const value = target.value;
-        console.log("target.value : "+value);
+        // console.log("target.value : "+value);
         const name = target.name;
-        console.log("target.name : "+name);
+        // console.log("target.name : "+name);
 
         this.setState({
             [name]: value
@@ -41,15 +41,15 @@ class IdentityVerification extends Component {
         })
             .then(function (response) {
             ret = response.data;
-            console.log("ret.message : "+ret.msg);
-            console.log("ret : "+ret);
+            // console.log("ret.message : "+ret.msg);
+            // console.log("ret : "+ret);
             alert("이메일이 전송되었습니다. 링크를 확인해주세요");
         })
         .catch(function (error) {
             ret = error.response;
             ret = ret.data;
-            console.log(ret);
-            console.log("error ret : "+ret.msg);
+            // console.log(ret);
+            // console.log("error ret : "+ret.msg);
             alert("Error");
             //에러 페이지 세분화
         });
@@ -60,6 +60,9 @@ class IdentityVerification extends Component {
     render() {
         return (
             <div className="Wallet">
+                <div className="header1">
+                    <p className="header2">SILLOCK</p>
+                </div>
                 <div className="Step">
                     <p className="w-title">본인인증</p>
                     <hr className="line"></hr>
@@ -67,7 +70,7 @@ class IdentityVerification extends Component {
                 </div>
                 <div className="Contents">
                     <div className="contentsName">
-                        <p className="w-title2">이메일 주소</p>
+                        <p className="w-title2">이메일 본인인증</p>
                         <p className="w-txt2">원활한 Sillock 서비스 이용을 위해 최초 1회 인증이 필요합니다.</p>
                     </div>
                     <div className="contents">
@@ -111,13 +114,14 @@ class IdentityVerification extends Component {
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div className="stepButton">
+                        <div className="stepButton">
                         <form>
                         <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button></Link>               
                         </form>
                         {/*-- 서버에서 온 값 : "{this.state.message}"*/}
                     </div>
+                    </div>
+                    
                 </div>
             </div>
           );
