@@ -72,3 +72,36 @@
     border-color : gray;
     margin-left: 25vh;
 }
+
+@media (min-width:320px) and (max-width:768px) {
+    .box1{
+        display: none;
+    }
+    .box2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5vh;
+        padding-right: 5vh;
+        content:"";
+        float: left;
+        height: 100vh;
+        width: 99vw;
+        margin-left: 3vw;
+    }
+    .formtitle{
+        font-size: 3em;
+    }
+    #checkbtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25%;
+        margin-top: 3em;
+    }
+    #inputlogin{
+        width: 45vw;
+    
+    }
+
+}

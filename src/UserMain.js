@@ -115,12 +115,12 @@ function UserLogOut2() {
               ret = response;
               status = ret.status;
               console.log("전송결과 : "+ret.statusText);
-              console.log(status);
+              // console.log(status);
               localStorage.setItem('status', status);
           })
           .catch(function (error) {
               ret = error.response;
-              console.log(ret);
+              // console.log(ret);
               status = ret.status;
               localStorage.setItem('status', status);
           });
@@ -133,11 +133,11 @@ function UserLogInOut() { //check api에 몰어봐서 200이면 로그인된 상
   
   status = localStorage.getItem('status');
         //현재 axios밖의 status에는 할당이 안됨.
-  console.log("status: "+status);
+  // console.log("status: "+status);
 
   if(status !== "200") isLoggedIn = false; //토큰이 없으면
   else isLoggedIn = true;
-  console.log("status2: "+status);
+  // console.log("status2: "+status);
   return isLoggedIn;
 }
 
