@@ -73,7 +73,7 @@
     margin-left: 25vh;
 }
 
-@media (min-width:320px) and (max-width:768px) {
+@media (min-width:320px) and (max-width:1000px) {
     .box1{
         display: none;
     }
@@ -93,15 +93,14 @@
         font-size: 3em;
     }
     #checkbtn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 25%;
+        display: block;        
+        margin-left: auto; 
+        margin-right: auto;
         margin-top: 3em;
+        width: 40vw;
     }
     #inputlogin{
         width: 45vw;
-    
     }
 
 }
