@@ -92,7 +92,13 @@ return  <ReactBootstrap.Button onClick={function() {UserLogOut2();}} style={navC
 function UserLogOut2() {
   console.log("토큰삭제")
   localStorage.removeItem('jwt');
-  window.location.reload();
+  console.log("토큰삭제 완료");
+  Getjwt();
+  setTimeout(function() {
+    console.log("토큰삭제 완료");
+    window.location.href = window.location.href;
+}, 300);
+  
   // this.props.history.push("/");
 }
 
@@ -130,11 +136,13 @@ function UserLogInOut() { //check api에 몰어봐서 200이면 로그인된 상
 
   if(status !== "200") isLoggedIn = false; //토큰이 없으면
   else isLoggedIn = true;
+  console.log("status2: "+status);
   return isLoggedIn;
 }
 
 function load(){
   var isLoggedIn = UserLogInOut();
+  console.log("isLoggedIn 결과 : "+isLoggedIn);
   if (isLoggedIn) return <UserLogOut />; 
   return <UserLogIn />;
 }
