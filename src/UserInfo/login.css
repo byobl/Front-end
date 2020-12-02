@@ -2,14 +2,15 @@
     content: "";
     display: block;
     clear: both;
+    width: 100vw;
 }
 
 .box1{
     height: 100vh;
-    width: 50vw;
+    width: 40vw;
     color:black;
     padding-top: 20vh;
-    padding-left: 30vh;
+    padding-left: 10vw;
     float: left;
 }
 .formtitle{
@@ -30,8 +31,10 @@
     display: inline-block;
     margin-top: 7vh;
     margin-bottom: auto;
-    padding-left: 10vh;
-    padding-right: 10vh;
+    margin-left: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
     padding-top: 3vh;
     padding-bottom: 3vh;
     line-height:10vh;
@@ -41,6 +44,9 @@
 }
 .Logindex{
     line-height:5vh;
+}
+#links{
+    text-align: center;
 }
 #inputlogin{
     height: 5vh;
@@ -65,4 +71,36 @@
     border-style: solid;
     border-color : gray;
     margin-left: 25vh;
+}
+
+@media (min-width:320px) and (max-width:1000px) {
+    .box1{
+        display: none;
+    }
+    .box2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5vh;
+        padding-right: 5vh;
+        content:"";
+        float: left;
+        height: 100vh;
+        width: 99vw;
+        margin-left: 3vw;
+    }
+    .formtitle{
+        font-size: 3em;
+    }
+    #checkbtn{
+        display: block;        
+        margin-left: auto; 
+        margin-right: auto;
+        margin-top: 3em;
+        width: 40vw;
+        height: 40px;
+    }
+    #inputlogin{
+        width: 45vw;
+    }
 }
