@@ -14,7 +14,7 @@ class CompleteCreation extends Component {
                 <p className="resultMsg">지갑 생성이 완료되었습니다.</p>
                 </div>
                 <form className="center-btn">
-                    <Link to="/"><Button id= "resultBtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">내 지갑 확인하기</Button></Link>             
+                    <Link to="/"><Button id= "resultBtn" variant="contained" value="Confirmation" >내 지갑 확인하기</Button></Link>             
                 </form>
             </div>
             

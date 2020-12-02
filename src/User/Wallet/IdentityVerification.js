@@ -55,7 +55,7 @@ class IdentityVerification extends Component {
             alert("Error");
             //에러 페이지 세분화
         });
-        //this.GetEmail();
+        //this.GetEmail(); //이메일 인증 확인
         //this.setState({ message: ret.msg});
         }
 
@@ -89,7 +89,7 @@ class IdentityVerification extends Component {
                         // this.props.history.push("/wallet/FirstStep");
                     } 
                 });
-                  
+                //this.setState({ message: ret.msg});
         }
 
     render() {
@@ -153,7 +153,7 @@ class IdentityVerification extends Component {
                         <form>
                         <Button id= "subbtn" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button>               
                         </form>
-                        {/*-- 서버에서 온 값 : "{this.state.message}*/}
+                        {/*-- 서버에서 온 값 : "{this.state.message}"*/}
                     </div>
                     </div>
                     

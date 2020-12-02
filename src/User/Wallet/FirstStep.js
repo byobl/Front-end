@@ -81,8 +81,27 @@ class FirstStep extends Component {
         }
     }
 
-    Savekey(){
+    async Savekey(){
+        var ret;
+        await axios.post('http://35.232.159.201:3000/api/wallet/pubkey',
+        {
+            "publicKey": ""
+          })
+          .then(function (response) {
+            ret = response.data;
+            console.log(ret.message);
+            console.log(ret);
+        })
+        .catch(function (error) {
+            ret = error.response;
+            console.log(ret);
+            ret = ret.data;
+            console.log(ret);
+            alert("이미 존재하는 유저입니다.");
+        });
 
+        this.setState({ message: ret.message});
+        if(this.state.message ==="Registered"){this.props.history.push("/userinfo/join");}
     }
 
     Getjwt(){
@@ -113,6 +132,9 @@ class FirstStep extends Component {
     render() {
         return (
             <div className="Wallet">
+                <div className="header1">
+                    <p className="header2">STEP 1. 정보입력</p>
+                </div>
                 <div className="Step">
                     <p className="w-title">Step 1</p>
                     <hr className="line"></hr>
@@ -140,7 +162,7 @@ class FirstStep extends Component {
                                     <TextField
                                     id="w-input"
                                     name="pwd1"
-                                    label="비밀번호 입력 (영문,숫자,특수문자 혼용 8자 이상)"
+                                    label=" 영문,숫자,특수문자 혼용 8자 이상"
                                     type="walletPassword"
                                     variant="outlined"
                                     onChange={this.handleChange}
@@ -151,7 +173,7 @@ class FirstStep extends Component {
                                     <TextField
                                     id="w-input"
                                     name="pwd2"
-                                    label="비밀번호 확인"
+                                    label="비밀번호 재확인"
                                     type="passwordCheck"
                                     variant="outlined"
                                     onChange={this.handleChange}

@@ -40,14 +40,14 @@
 .w-title2{
     font-weight: bold;
     padding-bottom: 3vh;
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 .w-txt{
     font-size: 1.5vw;
     padding-top: 7vh;
 }
 .w-txt2{
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 .w-txt3{
     font-size: 1vw;
@@ -73,7 +73,7 @@
     margin-bottom: 2.5vh;
     padding-left: 0.5vh;
     padding-right: 0.5vh;
-    background-color:  rgb(200, 150, 255);
+    background-color: blueviolet;
     color: black;
     width: 5vw;
     height: 5vh; 
@@ -81,7 +81,7 @@
 }
 #bigbtn{
     margin-left: 1vh;
-    margin-top: 1vh;
+    margin-top: 13vh;
     margin-bottom: 0.5vh;
     background-color: black;
     color: white;
@@ -132,7 +132,7 @@
 }
 #subbtn3{
     color: black;
-    background-color: rgb(200, 150, 255);
+    background-color:  blueviolet;
     display: inline-block;
     margin-right: 10vh;
     width: 10vw;
@@ -174,6 +174,17 @@
     #subbtn{
         width: 45vw;
     }
+    #subbtn3{
+        /* display: block;
+       margin-left: auto;
+       margin-right: auto; */
+       width: 45vw;
+    }
+    #bigbtn{
+        margin-top: 10vh;
+        font-size: 0.7em;
+        width: 80%;
+    }
     #w-input{
         height: 3vh;
         width: 60vw;
@@ -190,5 +201,21 @@
     }
     .conlayout{
         margin-top: 0;
+    }
+    .w-txt3{
+        font-size: 1.5em;
+    }
+    #subbtn{
+        margin-top: 8vh;
+    }
+    #w-input-label{
+        font-size: 1em;
+    }
+    .stepButton{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15vh;
+        margin-left: 1.5vw;
     }
 }

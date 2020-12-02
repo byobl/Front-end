@@ -9,6 +9,9 @@ class SecondStep extends Component {
     render() {
         return (
             <div className="Wallet">
+                 <div className="header1">
+                    <p className="header2">STEP 2. 지갑백업 다운</p>
+                </div>
                 <div className="Step">
                     <p className="w-title">Step 2</p>
                     <hr className="line"></hr>
@@ -17,7 +20,7 @@ class SecondStep extends Component {
                 <div className="Contents">
                     <div className="contentsName">
                         <p className="w-title2">새 지갑 만들기</p>
-                        <p className="w-txt2">키 생성 완료! 지갑 백업파일을 안전하게 보관하세요</p>
+                        <p className="w-txt2">키 생성 완료!<br/> 지갑 백업파일을 안전하게 보관하세요</p>
                     </div>
                     <div className="contents">
                         <div className="conlayout">
@@ -28,8 +31,8 @@ class SecondStep extends Component {
                     </div>
                     <div className="stepButton">
                         <tr>
-                            <td><Link to="/wallet/FirstStep"><Button id= "subbtn2" type="submit" variant="contained" value="Confirmation" className="Confirmation">이전</Button></Link></td>
-                            <td><Link to="/wallet/ThirdStep"><Button id= "subbtn3" type="submit" variant="contained" value="Confirmation" className="Confirmation">다음</Button></Link></td>                
+                            <td><Link to="/wallet/FirstStep"><Button id= "subbtn2" variant="contained" value="Confirmation" className="Confirmation">이전</Button></Link></td>
+                            <td><Link to="/wallet/ThirdStep"><Button id= "subbtn3" variant="contained" value="Confirmation" className="Confirmation">다음</Button></Link></td>                
                         </tr>
                     </div>
                 </div>
