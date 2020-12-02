@@ -139,8 +139,9 @@ class IdentityVerification extends Component {
                         </div>
                         <div className="stepButton">
                         <form>
-                        <Button id= "subbtn" type="submit" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button>           
+                        <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button></Link>               
                         </form>
+                        
                         {/*-- 서버에서 온 값 : "{this.state.message}"*/}
                     </div>
                     </div>

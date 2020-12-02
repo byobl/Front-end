@@ -24,7 +24,7 @@
 }
 #resultBtn{
     color: black;
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     display: block;
     margin-top:15vh;
     margin-left:auto; 
@@ -36,15 +36,15 @@
 }
 #subbtn2{
     color: black;
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     display: inline-block;
     width: 10vw;
     height: 5vh; 
     font-weight: bold;
 }
 #subbtn3{
-    color: black;
-    background-color: rgb(200, 150, 255);
+    color: white;
+    background-color:blueviolet;
     display: inline-block;
     margin-right: 10vh;
     width: 10vw;
@@ -58,4 +58,22 @@ margin-left:30vw;
 margin-right:30vw;
 display: block;
 height: 10vh;
+}
+
+@media (min-width:320px) and (max-width:700px) {
+    .resultMsg{
+        font-size: 1.5em;
+    }
+    #resultBtn{
+        width: 50vw;
+        font-size: 1em;
+    }
+    .center-btn{
+        display: block;
+        text-align: center;
+        width: 30vw;
+        margin-left: 25%;
+        border: white;
+        box-shadow: white;
+    }
 }

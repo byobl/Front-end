@@ -10,6 +10,9 @@ class FirstStep extends Component {
     render() {
         return (
             <div className="Wallet">
+                 <div className="header1">
+                    <p className="header2">STEP 1. 정보입력</p>
+                </div>
                 <div className="Step">
                     <p className="w-title">Step 1</p>
                     <hr className="line"></hr>
@@ -36,7 +39,7 @@ class FirstStep extends Component {
                                     <p className="w-txt3">지갑 비밀번호</p>
                                     <TextField
                                     id="w-input"
-                                    label="비밀번호 입력 (영문,숫자,특수문자 혼용 8자 이상)"
+                                    label=" 영문,숫자,특수문자 혼용 8자 이상"
                                     type="walletPassword"
                                     variant="outlined"
                                     />
@@ -45,19 +48,21 @@ class FirstStep extends Component {
                                     <p className="w-txt3">비밀번호 재입력</p>
                                     <TextField
                                     id="w-input"
-                                    label="비밀번호 확인"
+                                    label="비밀번호 재확인"
                                     type="passwordCheck"
                                     variant="outlined"
                                     />
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div className="stepButton">
+                        <div className="stepButton">
                         <form>
-                        <Link to="/wallet/SecondStep"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">확인</Button></Link>             
+                        <Link to="/wallet/SecondStep"><Button id= "subbtn" type="submit" 
+                        variant="contained" value="Confirmation" className="Confirmation">확인</Button></Link>             
                         </form>
                     </div>
+                    </div>
+                   
                 </div>
             </div>
             );

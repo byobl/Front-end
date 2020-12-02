@@ -9,6 +9,9 @@ class ThirdStep extends Component {
     render() {
         return (
             <div className="Wallet">
+                <div className="header1">
+                    <p className="header2">STEP 3. 지갑생성</p>
+                </div>
                 <div className="Step">
                     <p className="w-title">Step 3</p>
                     <hr className="line"></hr>
