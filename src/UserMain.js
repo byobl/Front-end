@@ -103,6 +103,7 @@ function UserLogOut2() {
   // this.props.history.push("/");
 }
 
+
  function Getjwt(){
     var ret;
     var status;
@@ -170,9 +171,6 @@ function UserMain() {
               <Nav.Link href="#" style={navContent}>실록안내</Nav.Link>
               <Nav.Link href="/institutionMain" style={navContent}>기업/기관</Nav.Link>
               <Nav.Link href="#" style={navContent}>자주 묻는 질문</Nav.Link>
-              {/* <Button  href="/userinfo/login" style={navContent} variant="light">로그인</Button> */}
-              {/* {location.reload()} */}
-              {Getjwt()}
               {load()}
              
             </Nav>
@@ -191,7 +189,7 @@ function UserMain() {
                 <Row>
                   <Col xs={12} md={6} className="box">
                     {UserLogInOut()? <Button  href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
-                  :  <Button  onClick={function() {loginMessage()}} style={buttonStyle1}>지갑생성하기</Button>}
+                  :  <Button  onClick={function() {loginMessage()}} style={buttonStyle1} className="mb-4">지갑생성하기</Button>}
                   </Col>
 
                   <Col xs={12} md={6} className="box">

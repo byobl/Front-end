@@ -41,21 +41,44 @@ class IdentityVerification extends Component {
         })
             .then(function (response) {
             ret = response.data;
-            // console.log("ret.message : "+ret.msg);
-            // console.log("ret : "+ret);
             alert("이메일이 전송되었습니다. 링크를 확인해주세요");
         })
         .catch(function (error) {
             ret = error.response;
             ret = ret.data;
-            // console.log(ret);
-            // console.log("error ret : "+ret.msg);
             alert("Error");
-            //에러 페이지 세분화
         });
-    
         this.setState({ message: ret.msg});
         }
+
+        // 이메일 인증은 어떻게 토큰을 가져오지??
+        // function Getjwt(){
+        //     var ret;
+        //     var status;
+        //     axios.get('http://35.232.159.201:3000/api/auth/verify/{token},{
+        //               headers: {
+        //                 'x-access-token': localStorage.getItem('jwt')
+        //               }
+        //           })
+        //             .then(function (response) {
+        //               ret = response;
+        //               status = ret.status;
+        //               console.log("전송결과 : "+ret.statusText);
+        //               // console.log(status);
+        //               localStorage.setItem('status', status);
+        //           })
+        //           .catch(function (error) {
+        //               ret = error.response;
+        //               // console.log(ret);
+        //               status = ret.status;
+        //               localStorage.setItem('status', status);
+        //           });
+        // }
+
+
+
+
+
 
     render() {
         return (
@@ -116,7 +139,7 @@ class IdentityVerification extends Component {
                         </div>
                         <div className="stepButton">
                         <form>
-                        <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button></Link>               
+                        <Button id= "subbtn" type="submit" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button>           
                         </form>
                         {/*-- 서버에서 온 값 : "{this.state.message}"*/}
                     </div>
