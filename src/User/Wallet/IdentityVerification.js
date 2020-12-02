@@ -20,11 +20,11 @@ class IdentityVerification extends Component {
 
     handleChange(e) {
         const target = e.target;
-        // console.log("target : "+target);
+        console.log("target : "+target);
         const value = target.value;
-        // console.log("target.value : "+value);
+        console.log("target.value : "+value);
         const name = target.name;
-        // console.log("target.name : "+name);
+        console.log("target.name : "+name);
 
         this.setState({
             [name]: value
@@ -33,6 +33,7 @@ class IdentityVerification extends Component {
 
       async onClickBtn(){ 
         var ret;
+        //if 이메일 최초 인증 된 유저인지 확인 작업
         await axios.post('http://35.232.159.201:3000/api/auth/verify',
         {
             "userId": this.state.userId,
@@ -41,20 +42,54 @@ class IdentityVerification extends Component {
         })
             .then(function (response) {
             ret = response.data;
-            // console.log("ret.message : "+ret.msg);
-            // console.log("ret : "+ret);
+            //console.log("ret.message : "+ret.msg);
+            //console.log("ret : "+ret);
             alert("이메일이 전송되었습니다. 링크를 확인해주세요");
+            window.location.replace("/wallet/FirstStep");   //이메일 확인 절차 x
         })
         .catch(function (error) {
             ret = error.response;
             ret = ret.data;
-            // console.log(ret);
-            // console.log("error ret : "+ret.msg);
+            //console.log(ret);
+            //console.log("error ret : "+ret.msg);
             alert("Error");
             //에러 페이지 세분화
         });
-    
-        this.setState({ message: ret.msg});
+        //this.GetEmail();
+        //this.setState({ message: ret.msg});
+        }
+
+        //** get email함수 수정 필요
+        GetEmail(){
+            var ret;
+            var status;
+            axios.get('http://35.232.159.201:3000​/api/auth/verify/${token}',
+                    {
+                        'token': localStorage.getItem('token')
+                      
+                  })
+                    .then(function (response) {
+                      ret = response;
+                      status = ret.status;
+                      console.log("전송결과 : "+ret.statusText);
+                      console.log(status);
+                      localStorage.setItem('status', status);
+                     
+                  })
+                  .catch(function (error) {
+                      ret = error.response;
+                      console.log(ret);
+                      status = ret.status;
+                      localStorage.setItem('status', status);
+                  })
+                  .then(function (response) {
+                    if(localStorage.getItem('status') === '200'){
+                        console.log("인증 성공"); 
+                        //window.location.replace("/wallet/FirstStep");
+                        // this.props.history.push("/wallet/FirstStep");
+                    } 
+                });
+                  
         }
 
     render() {
@@ -116,9 +151,9 @@ class IdentityVerification extends Component {
                         </div>
                         <div className="stepButton">
                         <form>
-                        <Link to="/wallet/FirstStep"><Button id= "subbtn" type="submit" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button></Link>               
+                        <Button id= "subbtn" variant="contained" onClick={(e) => { this.onClickBtn() }}>인증코드 받기</Button>               
                         </form>
-                        {/*-- 서버에서 온 값 : "{this.state.message}"*/}
+                        {/*-- 서버에서 온 값 : "{this.state.message}*/}
                     </div>
                     </div>
                     
