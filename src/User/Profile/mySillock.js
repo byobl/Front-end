@@ -82,7 +82,7 @@ class Mysillock extends Component {
                             <span className="expire-docs text-muted"><span className="dot"></span> 만료인증서 <span
                                 className="expire-docs-num">3</span></span>
                         </div>
-                        <div className="wallet-info mt-3">
+                        <div className="wallet-info mt-3 ml-5">
                             지갑 번호 : 5D3CA007DFE0BCFC67243DF5E50FB4501BA08CAEFCD788536B8DBF0B4EB15D7A
                         </div>
                     </div>

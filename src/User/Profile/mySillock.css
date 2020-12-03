@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* .navbar {
@@ -13,6 +14,8 @@
     text-align: start;
     display: block;
     margin-left: 2em;
+    padding-top: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .contents-docs {
@@ -96,10 +99,12 @@
 
 .docs-info {
     margin-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .docs-info > p {
     font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .wallet-info {
@@ -108,6 +113,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .line-div-expire {
