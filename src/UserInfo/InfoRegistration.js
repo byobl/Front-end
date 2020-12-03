@@ -92,6 +92,7 @@ class InfoRegistration extends Component {
     render() {
         return (
             <div className="signup">
+                 {/* ---큰 화면일 때 ---*/}
                 <div className="sign-header">
                     <Link to="/" style={{ textDecoration: 'none' }}>
                         <p className="bold">Sillock</p></Link>
@@ -100,6 +101,14 @@ class InfoRegistration extends Component {
                         <p className="sign-title">회원가입하기</p>
                     </div>
                     <img src={stepimg} className="sign-stepimg"/>
+                </div>
+                 {/* ---작은 화면일 때 ---*/}
+                 <div className="sign-header2">
+                        <p className="bold" ><Link to="/" style={{ textDecoration: 'none', 
+                        color:'white',marginTop:'0'}}>Sillock</Link></p>
+                    <div className="sign-head">
+                        <p className="sign-title">sillock 계정 생성</p>
+                    </div>
                 </div>
                 <div className="sign-content2">
                     <div>
@@ -155,16 +164,15 @@ class InfoRegistration extends Component {
                             />
                         </div>
                     </form>
-                    {/*
-                    <div>
-                    <button id='sign-subbtn' onClick={(e) => { this.onClickBtn() }}> 회원가입 정보 보내기 버튼</button> <br/>
-                    -- 서버에서 온 값 : "{this.state.message}" 
-                    </div>*/}
+                    <div className="buttonss">
+                            <Link to="/userinfo/signupTerms" style={{ textDecoration: 'none' }}>
+                                <Button variant="contained" color="primary" id="sign-subbtn">이전</Button></Link>
+                            <Button variant="contained" color="primary" id="sign-subbtn2" 
+                            onClick={(e) => { this.onClickBtn() }}>확인</Button>
+                    </div>
+                    
                 </div>
-                <div className="buttons">
-                        <Link to="/userinfo/signupTerms" style={{ textDecoration: 'none' }}><Button variant="contained" color="primary" id="sign-subbtn">이전</Button></Link>
-                        <Button variant="contained" color="primary" id="sign-subbtn2" onClick={(e) => { this.onClickBtn() }}>확인</Button>
-                </div>
+                
             </div>
             );
         }

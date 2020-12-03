@@ -3,6 +3,7 @@
     padding-top: 0;
     font-size: 3vh;
     text-align: left;
+    
 }
 
 .info2{
@@ -13,9 +14,14 @@
 p { 
     font-size: 1.5em;
     margin:0
+    
 }
 
 #logout{
     color: rgb(131, 49, 209);
     
+}
+.box{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
 }
