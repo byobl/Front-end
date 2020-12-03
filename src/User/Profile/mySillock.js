@@ -5,20 +5,7 @@ import profileIMG from '../Profile/profile.png';
 
 //import Masonry from 'react-masonry-css'
 import Masonry from 'react-masonry-component';
-// import {
-//     // Collapse, 
-//     Navbar,
-//     // NavbarToggler,
-//     // NavbarBrand,
-//     Nav,
-//     // NavItem,
-//     // NavLink,
-//     Container,
-//     Row,
-//     Col,
-//     // Jumbotron,
-//     // Button
-//   } from 'react-bootstrap';
+
 
 const masonryOptions = {
     transitionDuration: 0

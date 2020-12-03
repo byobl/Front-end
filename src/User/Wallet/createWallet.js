@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import "./wallet.css";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
@@ -18,7 +18,7 @@ class CreateWallet extends Component {
                 <div className="Contents">
                     <div className="contentsName">
                         <p className="w-title2">이메일 주소(createWallet)</p>
-                        <p className="w-txt2">원활한 Sillock 서비스 이용을 위해 최초 1회 인증이 필요합니다.</p>
+                        <p className="w-txt2 ">원활한 Sillock 서비스 이용을 위해 최초 1회 인증이 필요합니다.</p>
                     </div>
                     <div className="contents">
                         <div className="conlayout">

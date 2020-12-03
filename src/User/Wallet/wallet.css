@@ -70,7 +70,7 @@
 #w-btn{
     margin-left: 1vh;
     margin-top: 0.5vh;
-    margin-bottom: 2.5vh;
+    margin-bottom: 2vh;
     padding-left: 0.5vh;
     padding-right: 0.5vh;
     background-color: blueviolet;
@@ -97,12 +97,11 @@
     margin-right: auto;
 }
 .layout{
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 8vh;
     font-size: 3vw;
 }
 .layout2{
-    padding-top: 1vh;
+    padding-top: 5vh;
     padding-bottom: 1vh;
     font-size: 3vw;
 }
@@ -192,9 +191,8 @@
     .layout3{
         padding-bottom: 3vh;
     }
-    .stepButton{
-        height: 10vh;
-        margin-top: 2vh;
+    .layout{
+        padding-top: 13vh;
     }
     .contentsName{
         padding-top: 4vh;
@@ -206,7 +204,8 @@
         font-size: 1.5em;
     }
     #subbtn{
-        margin-top: 8vh;
+        margin-top: 2vh;
+        height: 3em;
     }
     #w-input-label{
         font-size: 1em;
@@ -215,7 +214,8 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 15vh;
         margin-left: 1.5vw;
+        height: 10vh;
+        margin-top: 5vh;
     }
 }
