@@ -2,14 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-.navbar {
+/* .navbar {
     background-color: #9733ee!important;
-}
+} */
 
-.navbar > a {
-    color: #F8F9FA!important;
+#nav1 > a {
+    color: #F8F9FA;
+    text-align: start;
+    display: block;
+    margin-left: 2em;
+    padding-top: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .contents-docs {
@@ -25,11 +31,12 @@
     background-color: #9733ee;
 }
 
-.content-title > h1 {
+.content-title > h2 {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 70px;
     color: #F8F9FA;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .contents {
@@ -92,6 +99,12 @@
 
 .docs-info {
     margin-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.docs-info > p {
+    font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .wallet-info {
@@ -100,43 +113,31 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .line-div-expire {
     background-color: #bebebe;
 }
 
-/* ---- grid ---- */
-.grid {
-    background: #ffffff;
-}
-
-/* clear fix */
 .grid:after {
     content: '';
     display: block;
     clear: both;
 }
 
-/* ---- .grid-item ---- */
+/* ---- grid-item ---- */
 .grid-sizer,
 .grid-item {
     cursor: pointer;
-    padding-right: 10px;
     padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 10px;
-    width: 33.3%;
-}
-
-.grid-item {
-    float: left;
-}
-
-.grid-item > div > p {
-    font-size: 10px;
+    width: 33.333%;
 }
 
 .grid-item img {
     display: block;
+    max-height: 100%;
     max-width: 100%;
 }

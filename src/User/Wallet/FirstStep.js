@@ -46,7 +46,8 @@ class FirstStep extends Component {
     onClickBtn(){ 
     var ret;
     const compare = this.e_comparePwd();
-        if(compare === true){ // 비밀번호가 일치하면
+        if(compare === true){ // 비밀번호가 일치하면---> 비밀번호 저장도 필요할 듯
+            
             axios.get('http://35.232.159.201:3000/api/wallet/make',{
                 headers: {
                 //'x-access-token': localStorage.getItem('jwt')
@@ -67,6 +68,11 @@ class FirstStep extends Component {
                 //console.log(ret);
                 //alert("이미 지갑이 존재합니다.");
                 //window.location.replace("/wallet/walletMain");
+                ret = ret.data;
+                //console.log(localStorage.getItem('jwt'));
+                
+                alert(ret.msg);
+
             });
             this.Createkey();
             this.Getjwt();

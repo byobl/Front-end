@@ -52,7 +52,7 @@ class IdentityVerification extends Component {
             ret = ret.data;
             //console.log(ret);
             //console.log("error ret : "+ret.msg);
-            alert("Error");
+            alert("올바른 입력인지 확인해주세요.");
             //에러 페이지 세분화
         });
         //this.GetEmail(); //이메일 인증 확인
@@ -123,7 +123,7 @@ class IdentityVerification extends Component {
                                     required
                                     />
                                 </div>
-                                <div>
+                                <div className="layout2">
                                     <TextField
                                     id="w-input"
                                     label="Password"
@@ -135,7 +135,7 @@ class IdentityVerification extends Component {
                                     required
                                     />
                                 </div>
-                                <div className="layout">
+                                <div className="layout2">
                                     <TextField
                                     id="w-input"
                                     label="Email"
