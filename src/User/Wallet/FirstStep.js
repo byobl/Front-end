@@ -50,31 +50,25 @@ class FirstStep extends Component {
             
             axios.get('http://35.232.159.201:3000/api/wallet/make',{
                 headers: {
-                //'x-access-token': localStorage.getItem('jwt')
-                'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIzN2M0NzE4ZTVlNzExYjJkZDM3NzciLCJ1c2VySUQiOiJ0ZXN0IiwiaWF0IjoxNjA3MDA1NjU1LCJleHAiOjE2MDcwOTIwNTUsImlzcyI6Imh0dHBzOi8vZ2l0aHViLmNvbS9zaGhhbjczMCIsInN1YiI6InVzZXJJbmZvIn0.wr9DJtVTIJTu8-XSJYXOMQhOgOmau9JwVIg9o1XpZis'
+                'x-access-token': localStorage.getItem('jwt')
                 }
             })
-            .then(function (response) {
+            .then((response) => {
                 ret = response.data;
                 console.log(ret);
-                //this.Savekey();
                 window.location.replace("/wallet/SecondStep");
-                
             })
-            .catch(function (error) {
+            .catch((error) => {
                 ret = error.response;
                 console.log(ret);
-                //ret = ret.data;
-                //console.log(ret);
-                //alert("이미 지갑이 존재합니다.");
-                //window.location.replace("/wallet/walletMain");
                 ret = ret.data;
-                //console.log(localStorage.getItem('jwt'));
-                
-                alert(ret.msg);
+                console.log(ret);
+                console.log(ret.msg);
+                this.Createkey();
+                alert("이미 지갑이 존재합니다.");
+                //window.location.replace("/wallet/walletMain");
 
             });
-            this.Createkey();
             this.Getjwt();
             //this.setState({ message: ret});
         }
@@ -85,40 +79,34 @@ class FirstStep extends Component {
 
     Createkey(){
         var ret;
-        {/*var crypt;
-        var prikey;
-        var pubkey;
-
-        crypt = new JSEncrypt({
+        var crypt = new JSEncrypt({
             default_key_size: 2048
         });
-        prikey = crypt.getPrivateKey();
-        pubkey = crypt.getPublicKey();
+        var prikey = crypt.getPrivateKey();
+        var pubkey = crypt.getPublicKey();
         console.log(crypt.getPrivateKey());
-        console.log(crypt.getPublicKey());*/}
-        axios.post('http://35.232.159.201:3000/api/wallet/pubkey',
-            {
+        console.log(crypt.getPublicKey());
+
+
+        axios.post('http://35.232.159.201:3000/api/wallet/pubkey', {
+                'publicKey': pubkey
+            },{
                 headers: {
                 'Content-Type': 'application/json',
-                //'x-access-token': localStorage.getItem('jwt')
-                'x-access-token' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIzN2M0NzE4ZTVlNzExYjJkZDM3NzciLCJ1c2VySUQiOiJ0ZXN0IiwiaWF0IjoxNjA3MDA1NjU1LCJleHAiOjE2MDcwOTIwNTUsImlzcyI6Imh0dHBzOi8vZ2l0aHViLmNvbS9zaGhhbjczMCIsInN1YiI6InVzZXJJbmZvIn0.wr9DJtVTIJTu8-XSJYXOMQhOgOmau9JwVIg9o1XpZis'
+                'x-access-token': localStorage.getItem('jwt')
                 }
             })
-            .then(function (response) {
+            .then((response)=> {
                 ret = response.data;
-                console.log(ret.message);
                 console.log(ret);
+                console.log(ret.message);
+                console.log("성공");
                 
             })
-            .catch(function (error) {
+            .catch((error)=> {
                 ret = error.response;
-                console.log(error);
                 console.log(ret);
-                ret = ret.data;
-                console.log(localStorage.getItem('jwt'));
-                console.log();
-                //console.log(pubkey);
-                alert("등록실패.");
+                alert("키 등록을 실패하였습니다.");
             });            
     }
 
