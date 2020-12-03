@@ -56,6 +56,7 @@ class FirstStep extends Component {
             .then((response) => {
                 ret = response.data;
                 console.log(ret);
+                //this.Createkey();
                 window.location.replace("/wallet/SecondStep");
             })
             .catch((error) => {
