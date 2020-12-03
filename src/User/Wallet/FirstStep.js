@@ -38,30 +38,25 @@ class FirstStep extends Component {
             return false
         } else{
             console.log("비밀번호가 일치합니다");
+            localStorage.setItem('walletPwd',this.state.pwd1);
             return true;
         }
     }
 
     onClickBtn(){ 
     var ret;
-    var crypt;
     const compare = this.e_comparePwd();
         if(compare === true){ // 비밀번호가 일치하면
             axios.get('http://35.232.159.201:3000/api/wallet/make',{
                 headers: {
-                'x-access-token': localStorage.getItem('jwt')
+                //'x-access-token': localStorage.getItem('jwt')
+                'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIzN2M0NzE4ZTVlNzExYjJkZDM3NzciLCJ1c2VySUQiOiJ0ZXN0IiwiaWF0IjoxNjA3MDA1NjU1LCJleHAiOjE2MDcwOTIwNTUsImlzcyI6Imh0dHBzOi8vZ2l0aHViLmNvbS9zaGhhbjczMCIsInN1YiI6InVzZXJJbmZvIn0.wr9DJtVTIJTu8-XSJYXOMQhOgOmau9JwVIg9o1XpZis'
                 }
             })
             .then(function (response) {
                 ret = response.data;
                 console.log(ret);
-                crypt = new JSEncrypt({
-                    default_key_size: 2048
-                });
-                console.log(crypt.getPrivateKey());
-                console.log(crypt.getPublicKey());
-                console.log(localStorage.getItem('jwt'));
-                this.Savekey();
+                //this.Savekey();
                 window.location.replace("/wallet/SecondStep");
                 
             })
@@ -70,9 +65,10 @@ class FirstStep extends Component {
                 console.log(ret);
                 //ret = ret.data;
                 //console.log(ret);
-                alert("이미 지갑이 존재합니다.");
-                window.location.replace("/wallet/walletMain");
+                //alert("이미 지갑이 존재합니다.");
+                //window.location.replace("/wallet/walletMain");
             });
+            this.Createkey();
             this.Getjwt();
             //this.setState({ message: ret});
         }
@@ -81,27 +77,43 @@ class FirstStep extends Component {
         }
     }
 
-    async Savekey(){
+    Createkey(){
         var ret;
-        await axios.post('http://35.232.159.201:3000/api/wallet/pubkey',
-        {
-            "publicKey": ""
-          })
-          .then(function (response) {
-            ret = response.data;
-            console.log(ret.message);
-            console.log(ret);
-        })
-        .catch(function (error) {
-            ret = error.response;
-            console.log(ret);
-            ret = ret.data;
-            console.log(ret);
-            alert("이미 존재하는 유저입니다.");
-        });
+        {/*var crypt;
+        var prikey;
+        var pubkey;
 
-        this.setState({ message: ret.message});
-        if(this.state.message ==="Registered"){this.props.history.push("/userinfo/join");}
+        crypt = new JSEncrypt({
+            default_key_size: 2048
+        });
+        prikey = crypt.getPrivateKey();
+        pubkey = crypt.getPublicKey();
+        console.log(crypt.getPrivateKey());
+        console.log(crypt.getPublicKey());*/}
+        axios.post('http://35.232.159.201:3000/api/wallet/pubkey',
+            {
+                headers: {
+                'Content-Type': 'application/json',
+                //'x-access-token': localStorage.getItem('jwt')
+                'x-access-token' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIzN2M0NzE4ZTVlNzExYjJkZDM3NzciLCJ1c2VySUQiOiJ0ZXN0IiwiaWF0IjoxNjA3MDA1NjU1LCJleHAiOjE2MDcwOTIwNTUsImlzcyI6Imh0dHBzOi8vZ2l0aHViLmNvbS9zaGhhbjczMCIsInN1YiI6InVzZXJJbmZvIn0.wr9DJtVTIJTu8-XSJYXOMQhOgOmau9JwVIg9o1XpZis'
+                }
+            })
+            .then(function (response) {
+                ret = response.data;
+                console.log(ret.message);
+                console.log(ret);
+                
+            })
+            .catch(function (error) {
+                ret = error.response;
+                console.log(error);
+                console.log(ret);
+                ret = ret.data;
+                console.log(localStorage.getItem('jwt'));
+                console.log();
+                //console.log(pubkey);
+                alert("등록실패.");
+            });            
     }
 
     Getjwt(){
