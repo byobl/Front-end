@@ -98,7 +98,7 @@ function UserLogOut2() {
   setTimeout(function() { 
     console.log("토큰삭제 완료");
     window.location.href = window.location.href;
-}, 500);
+}, 700);
   
   // this.props.history.push("/");
 }
@@ -170,7 +170,8 @@ function UserMain() {
               <Nav.Link href="/home" style={navContent}>실록소개</Nav.Link>
               <Nav.Link href="#" style={navContent}>실록안내</Nav.Link>
               <Nav.Link href="/institutionMain" style={navContent}>기업/기관</Nav.Link>
-              <Nav.Link href="#" style={navContent}>자주 묻는 질문</Nav.Link>
+              {UserLogInOut()? <Nav.Link href="/user/profile/mysillock" style={navContent}>내 지갑</Nav.Link>
+                  :  <Nav.Link onClick={function() {loginMessage()}} style={navContent}>내 지갑</Nav.Link>}
               {load()}
              
             </Nav>

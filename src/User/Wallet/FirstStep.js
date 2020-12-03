@@ -38,6 +38,7 @@ class FirstStep extends Component {
             return false
         } else{
             console.log("비밀번호가 일치합니다");
+            localStorage.setItem('walletPwd',this.state.pwd1);
             return true;
         }
     }
@@ -46,7 +47,8 @@ class FirstStep extends Component {
     var ret;
     var crypt;
     const compare = this.e_comparePwd();
-        if(compare === true){ // 비밀번호가 일치하면
+        if(compare === true){ // 비밀번호가 일치하면---> 비밀번호 저장도 필요할 듯
+            
             axios.get('http://35.232.159.201:3000/api/wallet/make',{
                 headers: {
                 'x-access-token': localStorage.getItem('jwt')
@@ -68,10 +70,12 @@ class FirstStep extends Component {
             .catch(function (error) {
                 ret = error.response;
                 console.log(ret);
-                //ret = ret.data;
-                //console.log(ret);
-                alert("이미 지갑이 존재합니다.");
-                window.location.replace("/wallet/walletMain");
+                ret = ret.data;
+                console.log(ret);
+                console.log(localStorage.getItem('jwt'));
+                
+                alert(ret.msg);
+                // window.location.replace("/wallet/walletMain");
             });
             this.Getjwt();
             //this.setState({ message: ret});
