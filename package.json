@@ -28,6 +28,7 @@
     "reactstrap": "^8.7.1",
     "redux": "^4.0.5",
     "tether": "^1.4.7",
+    "typekit": "^0.1.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

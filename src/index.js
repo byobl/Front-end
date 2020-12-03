@@ -12,6 +12,7 @@ import {CertificateMain,CareerRegistration,CareerInstitution,CareerChoice,Career
   MyChoice,MyPrintForm,MyTypeForm,MyIssueForm,Announcement, Announcement2, CertificateResult, CertificateResult2} from "./User/Certificate/index"
 import {WalletMain, IdentityVerification, CreateWallet, LoadWallet, FirstStep, SecondStep, ThirdStep, 
         UploadWallet, CompleteCreation, FailAccess, FailAccess2} from "./User/Wallet/index"
+import {Mysillock} from "./User/Profile/index"
 import {IssureRegister} from "./Institute/Issuer/index"
 import {Dashboard} from "./Institute/Verifier/index"
 
@@ -22,6 +23,7 @@ ReactDOM.render(
   <Route path="/" component={UserMain} exact />
   <Route path="/home" component={Home} exact />
   <Route path="/institutionMain" component={InstitutionMain} exact />
+  <Route path="/user/profile/mysillock" component={Mysillock} exact />
   <Route path="/userinfo/join" component={Join} exact />
   <Route path="/userinfo/login" component={LogIn} exact />
   <Route path="/userinfo/signup" component={SignUp} exact />
