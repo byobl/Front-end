@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .info{
     padding-left: 2vw;
     padding-top: 0;
@@ -25,3 +26,32 @@ p {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
 }
+=======
+.info{
+    padding-left: 2vw;
+    padding-top: 0;
+    font-size: 3vh;
+    text-align: left;
+    
+}
+
+.info2{
+    font-size: 6vh;
+    font-weight: 450;
+}
+
+p { 
+    font-size: 1.5em;
+    margin:0
+    
+}
+
+#logout{
+    color: rgb(131, 49, 209);
+    
+}
+.box{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e

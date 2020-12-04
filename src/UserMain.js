@@ -81,11 +81,19 @@ const buttonStyle2 = {
 
 
 function UserLogIn() {//로그아웃된 상태일때  
+<<<<<<< HEAD
   return <ReactBootstrap.Button href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>;
 }
 
 function UserLogOut() { //로그인된 상태일때 
   return <ReactBootstrap.Button onClick={function () { UserLogOut2(); }} style={navContent} variant="light" ><span id="logout">로그아웃</span></ReactBootstrap.Button>;
+=======
+  return  <ReactBootstrap.Button  href="/userinfo/login" style={navContent} variant="light">로그인</ReactBootstrap.Button>;
+}
+
+function UserLogOut() { //로그인된 상태일때 
+return  <ReactBootstrap.Button onClick={function() {UserLogOut2();}} style={navContent} variant="light" ><span id="logout">로그아웃</span></ReactBootstrap.Button>;
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
 }
 
 
@@ -95,15 +103,24 @@ function UserLogOut2() {
   console.log("토큰삭제 완료");
   Getjwt();
   //localStorage에 기록되는데 시작이 좀 걸리는 듯해서 0.5초 뒤 새로고침 한번 함.
+<<<<<<< HEAD
   setTimeout(function () {
     console.log("토큰삭제 완료");
     window.location.href = window.location.href;
   }, 700);
 
+=======
+  setTimeout(function() { 
+    console.log("토큰삭제 완료");
+    window.location.href = window.location.href;
+}, 700);
+  
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
   // this.props.history.push("/");
 }
 
 
+<<<<<<< HEAD
 function Getjwt() {
   var ret;
   var status;
@@ -125,23 +142,56 @@ function Getjwt() {
       status = ret.status;
       localStorage.setItem('status', status);
     });
+=======
+ function Getjwt(){
+    var ret;
+    var status;
+    axios.get('http://35.232.159.201:3000/api/auth/check',{
+              headers: {
+                'x-access-token': localStorage.getItem('jwt')
+              }
+          })
+            .then(function (response) {
+              ret = response;
+              status = ret.status;
+              console.log("전송결과 : "+ret.statusText);
+              // console.log(status);
+              localStorage.setItem('status', status);
+          })
+          .catch(function (error) {
+              ret = error.response;
+              // console.log(ret);
+              status = ret.status;
+              localStorage.setItem('status', status);
+          });
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
 }
 
 
 function UserLogInOut() { //check api에 몰어봐서 200이면 로그인된 상태-> 다른 링크 접근가능
   var isLoggedIn; // check한 토큰 유효하면 로그인유지
   var status;
+<<<<<<< HEAD
 
   status = localStorage.getItem('status');
   //현재 axios밖의 status에는 할당이 안됨.
   // console.log("status: "+status);
 
   if (status !== "200") isLoggedIn = false; //토큰이 없으면
+=======
+  
+  status = localStorage.getItem('status');
+        //현재 axios밖의 status에는 할당이 안됨.
+  // console.log("status: "+status);
+
+  if(status !== "200") isLoggedIn = false; //토큰이 없으면
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
   else isLoggedIn = true;
   // console.log("status2: "+status);
   return isLoggedIn;
 }
 
+<<<<<<< HEAD
 function load() {
   var isLoggedIn = UserLogInOut();
   console.log("isLoggedIn 결과 : " + isLoggedIn);
@@ -153,6 +203,20 @@ function loginMessage() {
   alert('로그인이 필요합니다');
 }
 
+=======
+function load(){
+  var isLoggedIn = UserLogInOut();
+  console.log("isLoggedIn 결과 : "+isLoggedIn);
+  if (isLoggedIn) return <UserLogOut />; 
+  return <UserLogIn />;
+}
+
+function loginMessage(){
+  alert('로그인이 필요합니다');
+}
+
+
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
 function UserMain() {
   return (
     <>
@@ -169,10 +233,17 @@ function UserMain() {
               <Nav.Link href="/home" style={navContent}>실록소개</Nav.Link>
               <Nav.Link href="#" style={navContent}>실록안내</Nav.Link>
               <Nav.Link href="/institutionMain" style={navContent}>기업/기관</Nav.Link>
+<<<<<<< HEAD
               {UserLogInOut() ? <Nav.Link href="/user/profile/mysillock" style={navContent}>내 지갑</Nav.Link>
                 : <Nav.Link onClick={function () { loginMessage() }} style={navContent}>내 지갑</Nav.Link>}
               {load()}
 
+=======
+              {UserLogInOut()? <Nav.Link href="/user/profile/mysillock" style={navContent}>내 지갑</Nav.Link>
+                  :  <Nav.Link onClick={function() {loginMessage()}} style={navContent}>내 지갑</Nav.Link>}
+              {load()}
+             
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -188,6 +259,7 @@ function UserMain() {
               <Col xs={12} md={8} className="w-100 text-center">
                 <Row>
                   <Col xs={12} md={6} className="box">
+<<<<<<< HEAD
                     {UserLogInOut() ? <Button href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
                       : <Button onClick={function () { loginMessage() }} style={buttonStyle1} className="mb-4">지갑생성하기</Button>}
                   </Col>
@@ -195,6 +267,15 @@ function UserMain() {
                   <Col xs={12} md={6} className="box">
                     {UserLogInOut() ? <Button href="/certificateMain" style={buttonStyle2}>내 증명서 만들기</Button>
                       : <Button onClick={function () { loginMessage() }} style={buttonStyle2}>내 증명서 만들기</Button>}
+=======
+                    {UserLogInOut()? <Button  href="/wallet/walletMain" style={buttonStyle1} className="mb-4">지갑생성하기</Button>
+                  :  <Button  onClick={function() {loginMessage()}} style={buttonStyle1} className="mb-4">지갑생성하기</Button>}
+                  </Col>
+
+                  <Col xs={12} md={6} className="box">
+                  {UserLogInOut()?  <Button  href="/certificateMain" style={buttonStyle2}>내 증명서 만들기</Button>
+                  :  <Button  onClick={function() {loginMessage()}} style={buttonStyle2}>내 증명서 만들기</Button>}
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
                   </Col>
                 </Row>
               </Col>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg id="구성_요소_10_17" data-name="구성 요소 10 – 17" xmlns="http://www.w3.org/2000/svg" width="605" height="133" viewBox="0 0 605 133">
   <line id="선_1" data-name="선 1" x2="492" transform="translate(55.5 27.5)" fill="none" stroke="#5a5858" stroke-width="3"/>
   <circle id="타원_1" data-name="타원 1" cx="27.5" cy="27.5" r="27.5" transform="translate(54)" fill="#fff"/>
@@ -10,3 +11,17 @@
   <text id="인증서_형태_선택" data-name="인증서 형태 선택" transform="translate(211 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">인증서</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">형태</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">선택</tspan></text>
   <text id="인증서_조합" data-name="인증서 조합" transform="translate(473 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">인증서</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">조합</tspan></text>
 </svg>
+=======
+<svg id="구성_요소_10_17" data-name="구성 요소 10 – 17" xmlns="http://www.w3.org/2000/svg" width="605" height="133" viewBox="0 0 605 133">
+  <line id="선_1" data-name="선 1" x2="492" transform="translate(55.5 27.5)" fill="none" stroke="#5a5858" stroke-width="3"/>
+  <circle id="타원_1" data-name="타원 1" cx="27.5" cy="27.5" r="27.5" transform="translate(54)" fill="#fff"/>
+  <circle id="타원_2" data-name="타원 2" cx="27.5" cy="27.5" r="27.5" transform="translate(280)" fill="#7663c5"/>
+  <circle id="타원_3" data-name="타원 3" cx="27.5" cy="27.5" r="27.5" transform="translate(497 3)" fill="#7663c5"/>
+  <text id="_1" data-name="1" transform="translate(71 39)" fill="#9db7ff" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">1</tspan></text>
+  <text id="_2" data-name="2" transform="translate(298 39)" fill="#9db7ff" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">2</tspan></text>
+  <text id="_3" data-name="3" transform="translate(514 41)" fill="#9db7ff" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">3</tspan></text>
+  <text id="내_이력_선택" data-name="내 이력 선택" transform="translate(0 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">내</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">이력</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">선택</tspan></text>
+  <text id="인증서_형태_선택" data-name="인증서 형태 선택" transform="translate(211 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">인증서</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">형태</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">선택</tspan></text>
+  <text id="인증서_조합" data-name="인증서 조합" transform="translate(473 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">인증서</tspan><tspan y="0" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"> </tspan><tspan y="0">조합</tspan></text>
+</svg>
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e

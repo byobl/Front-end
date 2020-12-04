@@ -56,7 +56,11 @@ class FirstStep extends Component {
             .then((response) => {
                 ret = response.data;
                 console.log(ret);
+<<<<<<< HEAD
                 this.Createkey();
+=======
+                //this.Createkey();
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
                 window.location.replace("/wallet/SecondStep");
             })
             .catch((error) => {
@@ -65,7 +69,11 @@ class FirstStep extends Component {
                 ret = ret.data;
                 console.log(ret);
                 console.log(ret.msg);
+<<<<<<< HEAD
                 //this.Createkey();
+=======
+                this.Createkey();
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
                 alert("이미 지갑이 존재합니다.");
                 //window.location.replace("/wallet/walletMain");
 
@@ -101,7 +109,11 @@ class FirstStep extends Component {
                 ret = response.data;
                 console.log(ret);
                 console.log(ret.message);
+<<<<<<< HEAD
                 console.log("공개키 등록 성공");
+=======
+                console.log("성공");
+>>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
                 
             })
             .catch((error)=> {
