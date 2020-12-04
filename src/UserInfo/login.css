@@ -1,0 +1,106 @@
+.LogIn:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100vw;
+}
+
+.box1{
+    height: 100vh;
+    width: 40vw;
+    color:black;
+    padding-top: 20vh;
+    padding-left: 10vw;
+    float: left;
+}
+.formtitle{
+    font-weight: bold;
+    padding-bottom: 3vh;
+    font-size: 2.7vw;
+}
+.box2{
+    display: block;
+    padding-top: 8vh;
+    padding-right: 8vh;
+    content:"";
+    float: left;
+    height: 100vh;
+    width: 50vw;
+}
+.form{
+    display: inline-block;
+    margin-top: 7vh;
+    margin-bottom: auto;
+    margin-left: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    line-height:10vh;
+    border-width : 3px 3px 3px 3px;
+    border-style : solid;
+    border-color : blueviolet;
+}
+.Logindex{
+    line-height:5vh;
+}
+#links{
+    text-align: center;
+}
+#inputlogin{
+    height: 5vh;
+    width: 25vw;
+    display: block;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+#checkbtn{   
+    background-color: blueviolet;
+    color: white; 
+    font-weight: bold;
+    width: 25vw;
+    height: 6vh;
+    display: block;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+#btn-style{
+    height: 2vh;
+    border-right: 2px;
+    border-style: solid;
+    border-color : gray;
+    margin-left: 25vh;
+}
+
+@media (min-width:320px) and (max-width:1000px) {
+    .box1{
+        display: none;
+    }
+    .box2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5vh;
+        padding-right: 5vh;
+        content:"";
+        float: left;
+        height: 100vh;
+        width: 99vw;
+        margin-left: 3vw;
+    }
+    .formtitle{
+        font-size: 3em;
+    }
+    #checkbtn{
+        display: block;        
+        margin-left: auto; 
+        margin-right: auto;
+        margin-top: 3em;
+        width: 40vw;
+        height: 40px;
+    }
+    #inputlogin{
+        width: 45vw;
+    }
+}

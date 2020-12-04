@@ -1,0 +1,221 @@
+.Wallet:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.Step{
+    background-color: blueviolet;
+    float: left;
+    height: 100vh;
+    width: 40vw;
+    color:white;
+    text-align: center;
+    padding-top: 25vh;
+}
+.Contents{
+    padding-left: 10vw;
+    content:"";
+    float: left;
+    width: 50vw;
+    height: 100vh;
+}
+.contentsName{
+    padding-top: 10vh;
+    height: 20vh;
+}
+.contents{
+    margin-top: auto;
+    margin-top: auto;
+    height: 30vw;
+}
+.stepButton{
+    height: 10vh;
+    margin-top: 10vh;
+}
+.w-title{
+    font-size: 3vw;
+    font-weight: bold;
+    padding-bottom: 5vh;
+}
+.w-title2{
+    font-weight: bold;
+    padding-bottom: 3vh;
+    font-size: 2.5vw;
+}
+.w-txt{
+    font-size: 1.5vw;
+    padding-top: 7vh;
+}
+.w-txt2{
+    font-size: 1.5vw;
+}
+.w-txt3{
+    font-size: 1vw;
+    font-weight: bold;
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+}
+.line{
+    height: 0.3vh;
+    width: 60%;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#w-input{
+    height: 3vh;
+    width: 35vw;
+}
+#w-btn{
+    margin-left: 1vh;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    background-color: blueviolet;
+    color: black;
+    width: 5vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+#bigbtn{
+    margin-left: 1vh;
+    margin-top: 13vh;
+    margin-bottom: 0.5vh;
+    background-color: black;
+    color: white;
+    width: 40vw;
+    height: 7vh; 
+    font-weight: bold;
+
+}
+.conlayout{
+    display: block;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.layout{
+    padding-top: 8vh;
+    font-size: 3vw;
+}
+.layout2{
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    font-size: 3vw;
+}
+.layout3{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 3vw;
+}
+#subbtn{
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+#subbtn2{
+    color: black;
+    background-color: rgb(222, 222, 222);
+    display: inline-block;
+    margin-left: 10vh;
+    width: 10vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+#subbtn3{
+    color: black;
+    background-color:  blueviolet;
+    display: inline-block;
+    margin-right: 10vh;
+    width: 10vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+.header1{
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    height: 10vh;
+    padding-top: 3vh;
+    display: none;
+}
+.header2{
+    font-size: 1.3em;
+}
+@media (min-width:320px) and (max-width:700px) {
+    .header1{
+        display: block;
+    }
+    .Step{
+        display: none;
+    }
+    .Contents{
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
+        width: 90%;
+        text-align: center;
+        padding-top: 0;
+    }
+    .w-title2{
+        font-size: 1.5em;
+    }
+    .w-txt2{
+        font-size: 1em;
+    }
+    #subbtn{
+        width: 45vw;
+    }
+    #subbtn3{
+        /* display: block;
+       margin-left: auto;
+       margin-right: auto; */
+       width: 45vw;
+    }
+    #bigbtn{
+        margin-top: 10vh;
+        font-size: 0.7em;
+        width: 80%;
+    }
+    #w-input{
+        height: 3vh;
+        width: 60vw;
+    }
+    .layout3{
+        padding-bottom: 3vh;
+    }
+    .layout{
+        padding-top: 13vh;
+    }
+    .contentsName{
+        padding-top: 4vh;
+    }
+    .conlayout{
+        margin-top: 0;
+    }
+    .w-txt3{
+        font-size: 1.5em;
+    }
+    #subbtn{
+        margin-top: 2vh;
+        height: 3em;
+    }
+    #w-input-label{
+        font-size: 1em;
+    }
+    .stepButton{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: 1.5vw;
+        height: 10vh;
+        margin-top: 5vh;
+    }
+}

@@ -1,0 +1,79 @@
+.background{
+    background-color:#9733EE;
+    height: 100vh;
+}
+.header{
+    color: white;
+    font-size: 2vw;
+}
+.resultMsg{
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    padding-top: 25vh;
+    padding-bottom: 5vh;
+}
+.center-btn{
+    display: block;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#resultBtn{
+    color: black;
+    background-color: #ffffff;
+    display: block;
+    margin-top:15vh;
+    margin-left:auto; 
+    margin-right:auto;
+    width: 20vw;
+    height: 8vh;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+#subbtn2{
+    color: black;
+    background-color: #ffffff;
+    display: inline-block;
+    width: 10vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+#subbtn3{
+    color: white;
+    background-color:blueviolet;
+    display: inline-block;
+    margin-right: 10vh;
+    width: 10vw;
+    height: 5vh; 
+    font-weight: bold;
+}
+.centerBtn{
+width: 150px;
+margin-top: 10vh;
+margin-left:30vw; 
+margin-right:30vw;
+display: block;
+height: 10vh;
+}
+
+@media (min-width:320px) and (max-width:700px) {
+    .resultMsg{
+        font-size: 1.5em;
+    }
+    #resultBtn{
+        width: 50vw;
+        font-size: 1em;
+    }
+    .center-btn{
+        display: block;
+        text-align: center;
+        width: 30vw;
+        margin-left: 25%;
+        border: white;
+        box-shadow: white;
+    }
+}

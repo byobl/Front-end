@@ -1,0 +1,246 @@
+.signup{
+    margin-bottom: 30vh;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.sign-header{
+    background-color: #9733ee;
+    color: white;
+    font-size: 2vw;
+}
+.sign-header2{
+   display: none;
+}
+.sign-head{
+    background-color: #9733ee;
+    color: white;
+    text-align: center;
+}
+.sign-title{
+    font-size: 4vw;
+    font-weight: bold;
+}
+.sign-stepimg{
+    width:35vw;
+    padding-top: 7vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 7vh;
+}
+.sign-content{
+    display: block;
+    padding-top: 7vh;
+    padding-left: 8vw;
+    margin-bottom: 10vh;
+    height: 80vh;
+    width: 90vw;
+}
+.sign-content2{
+    display: block;
+    padding-top: 7vh;
+    padding-left: 32vw;
+    margin-bottom: 10vh;
+    height: 70vh;
+    width: 90vw;
+}
+.sign-content3{
+    display: block;
+    padding-top: 7vh;
+    padding-left: 8vw;
+    margin-bottom: 10vh;
+    height: 40vh;
+    width: 90vw;
+}
+.sign-title{
+    font-size: 4vw;
+    font-weight: bold;
+}
+.sign-title2{
+    font-weight: bold;
+    padding-top: 10vh;
+    padding-bottom: 2vh;
+    font-size: 2.5vw;
+    text-align: center;
+}
+.sign-txt{
+    font-size: 2vw;
+    padding-bottom: 1vh;
+    font-weight: bold;
+}
+.sign-txt2{
+    font-size: 2vw;
+    padding-bottom: 7vh;
+    text-align: center;
+}
+.sign-txt3{
+    display: none;
+}
+.sign-txt4{
+    font-size: 2vw;
+    padding-bottom: 7vh;
+    text-align: center;
+}
+.sign-btn{
+   display: inline;
+}
+.sign-Button{
+    display: block;
+    text-align: center;
+    margin-top: 3vh;
+}
+#sign-subbtn{
+    background-color: rgb(222, 222, 222);
+    color: black;
+    font-weight: bold;
+    width: 10em;
+    height: 5vh; 
+}
+#sign-subbtn2{
+    color:white;
+    background-color:#9733ee;
+    margin-left: 10px;
+    font-weight: bold;
+    width: 10em;
+    height: 5vh; 
+}
+.i-layout{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 3vw;
+}
+.i-layout2{
+    padding-bottom: 5vh;
+    font-size: 3vw;
+}
+#i-input{
+    height: 3vh;
+    width: 35vw;
+}
+.container {
+    width: 80vw;
+    height: 19vh;
+    overflow: auto;
+}
+#chk{
+    margin-right: 10px;
+    width: 20px; /* 체크박스의 너비를 지정 */ 
+    height: 20px;
+}
+#chk2{
+    /* display: block;
+    margin-right: auto;
+    margin-left: auto; */
+    text-align: center;
+}
+.txt1{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+.buttonss{
+    text-align: center;
+    width: 42vw;
+}
+#i-input{
+    width: 40vw;
+}
+
+@media (min-width:320px) and (max-width:700px) {
+    .sign-header{
+        display: none;
+    }
+    .sign-header2{
+        display: block;
+     }
+     .sign-title{
+         font-size: 1.5em;
+     }
+     .sign-title2{
+        font-size: 1.2em;
+    }
+     .sign-txt{
+        font-size: 1.3em;
+    }
+    .sign-txt2{
+        display: none;
+    }
+    .sign-txt3{
+        font-size: 1em;
+        margin-bottom: 4vh;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+        text-align: center;
+        display: block;
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: rgb(231, 228, 228);
+    }
+    .sign-txt5{
+        font-size: 0.8em;
+        text-align: center;
+    }
+    .container{
+        font-size: 0.7em;
+    }
+    .txt1{
+        font-size: 1em;
+        /* font-weight: bold; */
+        margin-bottom: 1vh;
+        color: #520099;
+    }
+    .sign-header2{
+        background-color: #9733ee;
+    }
+    .sign-title{
+        padding-bottom: 1.5vh;
+    }
+    .bold{
+        padding-top: 0 0 0 0;
+    }
+    #sign-subbtn{
+        height: 3vh; 
+        width: 7em;
+    }
+    #sign-subbtn2{
+        height: 3vh;
+        width: 7em;
+    }
+    #sign-subbtn3{
+        height: 3em; 
+        width: 8em;
+        background-color: rgb(222, 222, 222);
+        color: black;
+        font-weight: bold;
+    }
+    #sign-subbtn4{
+        height: 3em; 
+        width: 8em;
+        color:white;
+        background-color:#9733ee;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .sign-content{
+        padding-top: 3vh;
+    }
+    #sign-subbtn{
+        height: 40px; 
+    }
+    #sign-subbtn2{
+        height: 40px;
+    }
+    .sign-content2{
+        margin-bottom: 3vh;
+        height: 55vh;
+        padding-left: 15vw;
+    }
+    #i-input{
+        width: 70vw;
+    }
+    .signup{
+        margin-bottom: 0;
+    }
+    .buttonss{
+        text-align: center;
+        width: 80vw;
+    }
+}

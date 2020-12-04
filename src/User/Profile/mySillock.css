@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* .navbar {
+    background-color: #9733ee!important;
+} */
+
+#nav1 > a {
+    color: #F8F9FA;
+    text-align: start;
+    display: block;
+    margin-left: 2em;
+    padding-top: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents-docs {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.content-title {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: -1px;
+    background-color: #9733ee;
+}
+
+.content-title > h2 {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    color: #F8F9FA;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents {
+
+    margin-top: -50px;
+}
+
+.contents > img {
+    border: 3px solid #F8F9FA;
+    width: 150px;
+    height: 150px;
+}
+
+.docs-status > div {
+    margin: 0 auto;
+    float: left;
+}
+
+.active-docs {
+    margin-right: 10px;
+}
+
+.expire-docs {
+    margin-left: 10px;
+}
+
+.btn-group > div > .btn{
+    color: #F8F9FA;
+    background-color: #9733ee;
+}
+
+.controll-btn {
+    margin: 3px;
+}
+
+.line-div {
+    background-color: #9733ee;
+}
+
+.active-docs .dot {
+    background-color: #9733ee;
+}
+
+.expire-docs .dot {
+    background-color: rgb(126, 126, 126);
+}
+
+.dot {
+    margin-right: 3px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.docs-items > img {
+    width: 100px;
+    height: 100px;
+}
+
+.docs-info {
+    margin-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.docs-info > p {
+    font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wallet-info {
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.line-div-expire {
+    background-color: #bebebe;
+}
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- grid-item ---- */
+.grid-sizer,
+.grid-item {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 33.333%;
+}
+
+.grid-item img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+}

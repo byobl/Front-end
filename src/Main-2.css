@@ -1,0 +1,27 @@
+.info{
+    padding-left: 2vw;
+    padding-top: 0;
+    font-size: 3vh;
+    text-align: left;
+    
+}
+
+.info2{
+    font-size: 6vh;
+    font-weight: 450;
+}
+
+p { 
+    font-size: 1.5em;
+    margin:0
+    
+}
+
+#logout{
+    color: rgb(131, 49, 209);
+    
+}
+.box{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+<svg id="구성_요소_10_13" data-name="구성 요소 10 – 13" xmlns="http://www.w3.org/2000/svg" width="574" height="133" viewBox="0 0 574 133">
+  <line id="선_1" data-name="선 1" x2="499" y2="1" transform="translate(46.5 27.5)" fill="none" stroke="#5a5858" stroke-width="3"/>
+  <circle id="타원_1" data-name="타원 1" cx="27.5" cy="27.5" r="27.5" transform="translate(47)" fill="#fff"/>
+  <circle id="타원_2" data-name="타원 2" cx="27.5" cy="27.5" r="27.5" transform="translate(273)" fill="#fff"/>
+  <circle id="타원_3" data-name="타원 3" cx="27.5" cy="27.5" r="27.5" transform="translate(490 3)" fill="#e1a1f1"/>
+  <text id="_1" data-name="1" transform="translate(64 39)" fill="#9733ee" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">1</tspan></text>
+  <text id="_2" data-name="2" transform="translate(291 39)" fill="#9733ee" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">2</tspan></text>
+  <text id="_3" data-name="3" transform="translate(507 41)" fill="#9733ee" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">3</tspan></text>
+  <text id="회원정보등록" transform="translate(226 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">회원정보등록</tspan></text>
+  <text id="이용약관동의" transform="translate(0 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">이용약관동의</tspan></text>
+  <text id="가입완료" transform="translate(474 127)" fill="#fff" font-size="25" font-family="MalgunGothicBold, Malgun Gothic"><tspan x="0" y="0">가입완료</tspan></text>
+</svg>
