@@ -2,11 +2,8 @@
   "name": "sillock",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
   "main": "public/electron.js",
   "homepage": "./",
-=======
->>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/data-grid": "^4.0.0-alpha.9",
@@ -17,7 +14,6 @@
     "application": "^0.1.4",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
-<<<<<<< HEAD
     "cross-env": "^7.0.3",
     "electron-json-storage": "^4.3.0",
     "electron-save-file": "^1.0.2",
@@ -29,11 +25,6 @@
     "jsencrypt": "^3.0.0-rc.1",
     "jsonwebtoken": "^8.5.1",
     "nedb": "^1.8.0",
-=======
-    "jquery": "^3.5.1",
-    "jsencrypt": "^3.0.0-rc.1",
-    "jsonwebtoken": "^8.5.1",
->>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -49,16 +40,12 @@
     "react-scripts": "4.0.0",
     "reactstrap": "^8.7.1",
     "redux": "^4.0.5",
-<<<<<<< HEAD
     "remote": "^0.2.6",
-=======
->>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
     "tether": "^1.4.7",
     "typekit": "^0.1.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-<<<<<<< HEAD
     "react-start": "react-scripts start",
     "react-build": "react-scripts build",
     "react-test": "react-scripts test --env=jsdom",
@@ -67,12 +54,6 @@
     "release": "yarn react-build && electron-builder --publish=always",
     "build": "yarn react-build && yarn electron-build",
     "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
-=======
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
->>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
   },
   "eslintConfig": {
     "extends": [
@@ -91,14 +72,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
     "electron": "^11.0.3",
     "electron-is-dev": "^1.2.0",
     "wait-on": "^5.2.0"
-=======
->>>>>>> 0f8a6429f481749053d3a9988cb5093c79697d2e
   }
 }
