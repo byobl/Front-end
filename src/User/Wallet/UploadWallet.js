@@ -11,6 +11,9 @@ class UploadWallet extends Component {
         /*if 문 추가-> 최초 1회 인증 미완료 시 본인인증, 완료 시 생성 단계*/
         return (
             <div className="Wallet">
+                 <div className="header1">
+                    <p className="header2">MY 지갑</p>
+                </div>
                 <div className="Step">
                     <p className="w-title">my 지갑</p>
                     <hr className="line"></hr>
@@ -18,7 +21,7 @@ class UploadWallet extends Component {
                 </div>
                 <div className="Contents">
                     <div className="contentsName">
-                        <p className="w-title2">지갑 가져오기</p>
+                        <p className="w-title2 ">지갑 가져오기</p>
                         <p className="w-txt2">지갑 백업 파일을 업로드 해 주세요.</p>
                     </div>
                     <div className="contents">
@@ -30,7 +33,7 @@ class UploadWallet extends Component {
                                         <tr>
                                             <td>
                                                 <TextField
-                                                id="w-input"
+                                                id="w-input2"
                                                 label="Upload"
                                                 type="upload"
                                                 variant="outlined"

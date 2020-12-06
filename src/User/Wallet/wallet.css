@@ -65,6 +65,10 @@
 }
 #w-input{
     height: 2vh;
+    width: 33vw;
+}
+#w-input2{
+    height: 2vh;
     width: 22vw;
 }
 #w-btn{
@@ -186,6 +190,10 @@
         width: 80%;
     }
     #w-input{
+        height: 2vh;
+        width: 60vw;
+    }
+    #w-input2{
         height: 2vh;
         width: 40vw;
     }
