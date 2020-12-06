@@ -80,7 +80,7 @@ class InfoRegistration extends Component {
             });
     
             this.setState({ message: ret.message});
-            if(this.state.message ==="Registered"){this.props.history.push("/userinfo/join");}
+            if(this.state.message ==="Registered"){this.props.history.push("/wallet/IdentityVerification");}
         }
         else{ //아니면
             alert("입력된 두 비밀번호가 다릅니다. 다시 확인해주세요");

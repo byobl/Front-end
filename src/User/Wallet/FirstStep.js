@@ -197,13 +197,14 @@ class FirstStep extends Component {
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div className="stepButton">
+                        <div className="stepButton">
                         <form>
                         <Button id= "subbtn" variant="contained" className="Confirmation" onClick={(e) => { this.onClickBtn() }}>확인</Button>     
                         {/*-- 서버에서 온 값 : "{this.state.message}"*/} 
                         </form>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
             );

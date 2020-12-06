@@ -45,7 +45,7 @@ class IdentityVerification extends Component {
             //console.log("ret.message : "+ret.msg);
             //console.log("ret : "+ret);
             alert("이메일이 전송되었습니다. 링크를 확인해주세요");
-            window.location.replace("/wallet/FirstStep");   //이메일 확인 절차 x
+            window.location.replace("/userinfo/join");   //이메일 확인 절차 x
         })
         .catch(function (error) {
             ret = error.response;

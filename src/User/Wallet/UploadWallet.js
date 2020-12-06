@@ -11,6 +11,9 @@ class UploadWallet extends Component {
         /*if 문 추가-> 최초 1회 인증 미완료 시 본인인증, 완료 시 생성 단계*/
         return (
             <div className="Wallet">
+                 <div className="header1">
+                    <p className="header2">MY 지갑</p>
+                </div>
                 <div className="Step">
                     <p className="w-title">my 지갑</p>
                     <hr className="line"></hr>
@@ -18,30 +21,38 @@ class UploadWallet extends Component {
                 </div>
                 <div className="Contents">
                     <div className="contentsName">
-                        <p className="w-title2">지갑 가져오기</p>
+                        <p className="w-title2 ">지갑 가져오기</p>
                         <p className="w-txt2">지갑 백업 파일을 업로드 해 주세요.</p>
                     </div>
                     <div className="contents">
                         <div className="conlayout">
                             <form>
                                 <div className="layout3">
-                                    <p className="w-txt3">지갑 백업 파일을 업로드 선택</p>
-                                    <TextField
-                                    id="w-input"
-                                    label="Upload"
-                                    type="upload"
-                                    variant="outlined"
-                                    />
-                                    <Button id= "w-btn" variant="contained" className="EmailRequest">업로드 하기</Button>
+                                <p className="w-txt3">업로드 할 지갑 백업 파일 선택</p>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <TextField
+                                                id="w-input2"
+                                                label="Upload"
+                                                type="upload"
+                                                variant="outlined"
+                                                /></td>
+                                            <td><Button id= "w-btn" variant="contained" className="EmailRequest">업로드 하기</Button></td>
+                                        </tr>
+                                    </table>
+                                    
+                                    
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div className="stepButton">
+                        <div className="stepButton">
                         <form>
                         <Link to="/wallet/failAccess"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">지갑찾기</Button></Link>                 
                         </form>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
           );

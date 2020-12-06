@@ -12,10 +12,10 @@ class WalletMain extends Component {
                 <p className="text">내 지갑 생성하기</p>
                 <table id="table">
                     <tr>
-                        <td><Link to="/wallet/IdentityVerification" style={{ textDecoration: 'none' }}><Button variant="outlined" id="button">새 지갑 만들기</Button></Link></td>
+                        <td><Link to="/wallet/FirstStep" style={{ textDecoration: 'none' }}><Button variant="outlined" id="button">새 지갑 만들기</Button></Link></td>
                     </tr>
                     <tr>
-                       <td><Link to="/wallet/loadWallet" style={{ textDecoration: 'none' }}><Button variant="outlined" id="button">지갑 가져오기</Button></Link></td>
+                       <td><Link to="/wallet/uploadWallet" style={{ textDecoration: 'none' }}><Button variant="outlined" id="button">지갑 가져오기</Button></Link></td>
                     </tr>
                 </table>
             </div>

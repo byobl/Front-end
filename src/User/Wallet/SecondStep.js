@@ -28,13 +28,14 @@ class SecondStep extends Component {
                             <Button id= "bigbtn" variant="contained" className="EmailRequest">지갑백업파일 다운로드</Button>                                
                             </form>
                         </div>
-                    </div>
-                    <div className="stepButton">
+                        <div className="stepButton">
                         <tr>
                             <td><Link to="/wallet/FirstStep"><Button id= "subbtn2" variant="contained" value="Confirmation" className="Confirmation">이전</Button></Link></td>
                             <td><Link to="/wallet/ThirdStep"><Button id= "subbtn3" variant="contained" value="Confirmation" className="Confirmation">다음</Button></Link></td>                
                         </tr>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
             );

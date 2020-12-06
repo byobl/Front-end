@@ -1,24 +1,14 @@
 import Button from '@material-ui/core/Button';
-//import Navbar from "./Components/Navbar/Navbar";
-//import { Link } from 'react-router-dom';
-// import './Main.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BGimage from './img/보라배경.svg'
 import './Main-2.css';
 import {
-  // Collapse, 
   Navbar,
-  // NavbarToggler,
-  // NavbarBrand,
   Nav,
-  // NavItem,
-  // NavLink,
   Container,
   Row,
-  Col,
-  // Jumbotron,
-  // Button
+  Col
 } from 'react-bootstrap';
 
 import * as ReactBootstrap from 'react-bootstrap';
