@@ -3,20 +3,22 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter,Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Home from "./home"
 import UserMain from "./UserMain"
 import InstitutionMain from "./InstitutionMain"
-import {LogIn,Join,SignUp,SignupTerms,InfoRegistration,EmailAuth} from "./UserInfo/index"
-import {CertificateMain,CareerRegistration,CareerInstitution,CareerChoice,CareerRequest,MyCombination,
-  MyChoice,MyPrintForm,MyTypeForm,MyIssueForm,Announcement, Announcement2, CertificateResult, CertificateResult2} from "./User/Certificate/index"
-import {WalletMain, IdentityVerification, CreateWallet, LoadWallet, FirstStep, SecondStep, ThirdStep, 
-        UploadWallet, CompleteCreation, FailAccess, FailAccess2} from "./User/Wallet/index"
-import {Mysillock} from "./User/Profile/index"
-import {IssureRegister} from "./Institute/Issuer/index"
-import {Dashboard} from "./Institute/Verifier/index"
-
-
+import { LogIn, Join, SignUp, SignupTerms, InfoRegistration, EmailAuth } from "./UserInfo/index"
+import {
+  CertificateMain, CareerRegistration, CareerInstitution, CareerChoice, CareerRequest, MyCombination,
+  MyChoice, MyPrintForm, MyTypeForm, MyIssueForm, Announcement, Announcement2, CertificateResult, CertificateResult2
+} from "./User/Certificate/index"
+import {
+  WalletMain, IdentityVerification, CreateWallet, LoadWallet, FirstStep, SecondStep, ThirdStep,
+  UploadWallet, CompleteCreation, FailAccess, FailAccess2
+} from "./User/Wallet/index"
+import { Mysillock } from "./User/Profile/index"
+import { IssureRegister } from "./Institute/Issuer/index"
+import { Dashboard } from "./Institute/Verifier/index"
 
 ReactDOM.render(
   <BrowserRouter>
@@ -57,6 +59,7 @@ ReactDOM.render(
   <Route path="/certificate/myIssueForm" component={MyIssueForm} exact />
   <Route path="/certificate/certificateResult" component={CertificateResult} exact />
   <Route path="/certificate/certificateResult2" component={CertificateResult2} exact />
+
   </BrowserRouter>,
   document.getElementById("root")
 );

@@ -56,7 +56,7 @@ class FirstStep extends Component {
             .then((response) => {
                 ret = response.data;
                 console.log(ret);
-                //this.Createkey();
+                this.Createkey();
                 window.location.replace("/wallet/SecondStep");
             })
             .catch((error) => {
@@ -65,7 +65,7 @@ class FirstStep extends Component {
                 ret = ret.data;
                 console.log(ret);
                 console.log(ret.msg);
-                this.Createkey();
+                //this.Createkey();
                 alert("이미 지갑이 존재합니다.");
                 //window.location.replace("/wallet/walletMain");
 
@@ -101,7 +101,7 @@ class FirstStep extends Component {
                 ret = response.data;
                 console.log(ret);
                 console.log(ret.message);
-                console.log("성공");
+                console.log("공개키 등록 성공");
                 
             })
             .catch((error)=> {
