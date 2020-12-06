@@ -67,7 +67,7 @@ class FirstStep extends Component {
                 console.log(ret.msg);
                 //this.Createkey();
                 alert("이미 지갑이 존재합니다.");
-                //window.location.replace("/wallet/walletMain");
+                window.location.replace("/wallet/walletMain");
 
             });
             this.Getjwt();
@@ -88,6 +88,15 @@ class FirstStep extends Component {
         console.log(crypt.getPrivateKey());
         console.log(crypt.getPublicKey());
 
+        const fs = window.require('fs');
+        const path = window.require('path')
+
+        // 수정 필요
+        fs.writeFile(`src/User/static/privateKey.pem${__dirname}`, prikey, function (err) {
+            if (err) throw err;
+            //console.log('완료!');
+            alert("완료!")
+        });
 
         axios.post('http://35.232.159.201:3000/api/wallet/pubkey', {
                 'publicKey': pubkey
