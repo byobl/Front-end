@@ -80,6 +80,9 @@
     padding-bottom: 7vh;
     text-align: center;
 }
+.sign-txt5{
+    display: none;
+}
 .sign-btn{
    display: inline;
 }
@@ -177,6 +180,7 @@
     .sign-txt5{
         font-size: 0.8em;
         text-align: center;
+        
     }
     .container{
         font-size: 0.7em;

@@ -50,7 +50,7 @@
     font-size: 1.5vw;
 }
 .w-txt3{
-    font-size: 1vw;
+    font-size: 0.6em;
     font-weight: bold;
     padding-left: 1vh;
     padding-bottom: 1vh;
@@ -64,19 +64,19 @@
     margin-right: auto;
 }
 #w-input{
-    height: 3vh;
-    width: 35vw;
+    height: 2vh;
+    width: 22vw;
 }
 #w-btn{
-    margin-left: 1vh;
-    margin-top: 0.5vh;
-    margin-bottom: 2vh;
+    margin-left: 0;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     padding-left: 0.5vh;
     padding-right: 0.5vh;
-    background-color: blueviolet;
-    color: black;
-    width: 5vw;
-    height: 5vh; 
+    background-color:black;
+    color: white;
+    width: 8em;
+    height: 6vh; 
     font-weight: bold;
 }
 #bigbtn{
@@ -109,6 +109,7 @@
     padding-top: 10vh;
     padding-bottom: 10vh;
     font-size: 3vw;
+    margin-right: 0;
 }
 #subbtn{
     color: rgb(255, 255, 255);
@@ -185,8 +186,8 @@
         width: 80%;
     }
     #w-input{
-        height: 3vh;
-        width: 60vw;
+        height: 2vh;
+        width: 40vw;
     }
     .layout3{
         padding-bottom: 3vh;

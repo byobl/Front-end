@@ -30,8 +30,8 @@ ReactDOM.render(
   <Route path="/userinfo/signupTerms" component={SignupTerms} exact />
   <Route path="/userinfo/infoRegistration" component={InfoRegistration} exact />
   <Route path="/userinfo/EmailAuth" component={EmailAuth} exact />
-  <Route path="/wallet/walletMain" component={WalletMain} exact />
   <Route path="/wallet/IdentityVerification" component={IdentityVerification} exact />
+  <Route path="/wallet/walletMain" component={WalletMain} exact />
   <Route path="/wallet/createWallet" component={CreateWallet} exact />
   <Route path="/wallet/loadWallet" component={LoadWallet} exact />
   <Route path="/wallet/FirstStep" component={FirstStep} exact />

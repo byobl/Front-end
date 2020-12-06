@@ -25,23 +25,31 @@ class UploadWallet extends Component {
                         <div className="conlayout">
                             <form>
                                 <div className="layout3">
-                                    <p className="w-txt3">지갑 백업 파일을 업로드 선택</p>
-                                    <TextField
-                                    id="w-input"
-                                    label="Upload"
-                                    type="upload"
-                                    variant="outlined"
-                                    />
-                                    <Button id= "w-btn" variant="contained" className="EmailRequest">업로드 하기</Button>
+                                <p className="w-txt3">업로드 할 지갑 백업 파일 선택</p>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <TextField
+                                                id="w-input"
+                                                label="Upload"
+                                                type="upload"
+                                                variant="outlined"
+                                                /></td>
+                                            <td><Button id= "w-btn" variant="contained" className="EmailRequest">업로드 하기</Button></td>
+                                        </tr>
+                                    </table>
+                                    
+                                    
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div className="stepButton">
+                        <div className="stepButton">
                         <form>
                         <Link to="/wallet/failAccess"><Button id= "subbtn" type="submit" variant="contained" value="Confirmation" className="Confirmation">지갑찾기</Button></Link>                 
                         </form>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
           );
