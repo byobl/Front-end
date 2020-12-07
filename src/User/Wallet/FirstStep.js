@@ -65,9 +65,9 @@ class FirstStep extends Component {
                 ret = ret.data;
                 console.log(ret);
                 console.log(ret.msg);
-                //this.Createkey();
+                this.Createkey();
                 alert("이미 지갑이 존재합니다.");
-                window.location.replace("/wallet/walletMain");
+                //window.location.replace("/wallet/walletMain");
 
             });
             this.Getjwt();
@@ -92,6 +92,30 @@ class FirstStep extends Component {
     }
     */
 
+    Walletinfo() { 
+        var ret;               
+            axios.get('http://35.232.159.201:3000/api/wallet/status',{
+                headers: {
+                'x-access-token': localStorage.getItem('jwt')
+                }
+            })
+            .then((response) => {
+                ret = response.data;
+                console.log(ret);
+                localStorage.setItem('walletinfo', ret);
+            })
+            .catch((error) => {
+                ret = error.response;
+                console.log(ret);
+                ret = ret.data;
+                console.log(ret);
+                console.log(ret.msg);
+                console.log('지갑정보 로드 실패');
+            });
+            this.Getjwt();
+            //this.setState({ message: ret});
+        }
+
     Createkey(){
         var ret;
         var crypt = new JSEncrypt({
@@ -105,12 +129,13 @@ class FirstStep extends Component {
         const fs = window.require('fs');
         //const path = window.require('path')
         
+        
         const wallet = {
-            password: localStorage.getItem('walletPwd'),
-            privatekey: prikey,
+            a: localStorage.getItem('walletPwd'),
+            b: localStorage.getItem('walletinfo'),
             publickey: pubkey
         }
-
+        console.log('walletinfo:'+localStorage.getItem('walletinfo'));
         fs.writeFile(`src/User/static/privateKey.pem${__dirname}`, prikey, function (err) {
             if (err) throw err;
             console.log('키 파일 생성 완료!');
@@ -119,7 +144,7 @@ class FirstStep extends Component {
             if (err) throw err;
             console.log('지갑 백업 파일 생성!');
         });
-
+        this.Walletinfo();
         axios.post('http://35.232.159.201:3000/api/wallet/pubkey', {
                 'publicKey': pubkey
             },{
