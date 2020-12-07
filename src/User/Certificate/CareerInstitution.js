@@ -93,8 +93,8 @@ class CareerInstitution extends Component {
         //   });
         // // console.log("rows : "+this.GetISSUER());
         var rows = localStorage.getItem('Issuers');
-        rows = rows.split(",");
-        var result = JSON.parse(rows);
+        // rows = rows.split(",");
+        // var result = JSON.parse(rows);
         return (
             <div className="career">
                 <div className="header">
@@ -123,12 +123,12 @@ class CareerInstitution extends Component {
                     <div>
                         
                     <Button variant="contained" color="primary" onClick={(e) =>{this.GetISSUER()}} id="buttonsss"> 검사용 </Button>
-                                <div> -- 서버에서 온 값 : "{result[0]}" </div> 
+                                <div> -- 서버에서 온 값 : "{}" </div> 
                     </div><br/><br/>
                     <Form.Group controlId="exampleForm.ControlSelect2">
                         <Form.Label className="em-2">기관 리스트</Form.Label>
                         <Form.Control as="select" multiple>
-                        <option>{rows[0]}</option>
+                        <option>{}</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>

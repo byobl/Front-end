@@ -25,6 +25,7 @@
     "jsencrypt": "^3.0.0-rc.1",
     "jsonwebtoken": "^8.5.1",
     "nedb": "^1.8.0",
+    "node-pdf-report": "^1.1.0",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

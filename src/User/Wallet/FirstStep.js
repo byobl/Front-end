@@ -21,11 +21,11 @@ class FirstStep extends Component {
 
     handleChange(e) {
         const target = e.target;
-        console.log("target : "+target);
+        //console.log("target : "+target);
         const value = target.value;
-        console.log("target.value : "+value);
+        //console.log("target.value : "+value);
         const name = target.name;
-        console.log("target.name : "+name);
+        //console.log("target.name : "+name);
 
         this.setState({
             [name]: value
@@ -34,10 +34,10 @@ class FirstStep extends Component {
 
     e_comparePwd(){
         if( this.state.pwd1 !== this.state.pwd2 ){
-            console.log("비밀번호 불일치");
+            //console.log("비밀번호 불일치");
             return false
         } else{
-            console.log("비밀번호가 일치합니다");
+            //console.log("비밀번호가 일치");
             localStorage.setItem('walletPwd',this.state.pwd1);
             return true;
         }
@@ -46,7 +46,7 @@ class FirstStep extends Component {
     onClickBtn(){ 
     var ret;
     const compare = this.e_comparePwd();
-        if(compare === true){ // 비밀번호가 일치하면---> 비밀번호 저장도 필요할 듯
+        if(compare === true){
             
             axios.get('http://35.232.159.201:3000/api/wallet/make',{
                 headers: {
@@ -78,6 +78,20 @@ class FirstStep extends Component {
         }
     }
 
+    /* 절대경로 x
+    https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
+    fs.writeFile(file, data[, options], callback)
+    fs.writeFile()파일 설명자와 함께 사용
+    
+    import { useLocation } from 'react-router-dom'
+
+    function HeaderView() {
+        const location = useLocation();
+        console.log(location.pathname);
+        return <span>Path : {location.pathname}</span>
+    }
+    */
+
     Createkey(){
         var ret;
         var crypt = new JSEncrypt({
@@ -89,13 +103,21 @@ class FirstStep extends Component {
         console.log(crypt.getPublicKey());
 
         const fs = window.require('fs');
-        const path = window.require('path')
+        //const path = window.require('path')
+        
+        const wallet = {
+            password: localStorage.getItem('walletPwd'),
+            privatekey: prikey,
+            publickey: pubkey
+        }
 
-        // 수정 필요
         fs.writeFile(`src/User/static/privateKey.pem${__dirname}`, prikey, function (err) {
             if (err) throw err;
-            //console.log('완료!');
-            alert("완료!")
+            console.log('키 파일 생성 완료!');
+        });
+        fs.writeFile(`src/User/static/walletinfo.json${__dirname}`, JSON.stringify(wallet), function (err) {
+            if (err) throw err;
+            console.log('지갑 백업 파일 생성!');
         });
 
         axios.post('http://35.232.159.201:3000/api/wallet/pubkey', {
